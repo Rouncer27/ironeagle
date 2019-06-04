@@ -1,18 +1,14 @@
-/**
- * Layout component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
-
-import React from "react"
+import React, { Component } from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
+import styled, { ThemeProvider } from "styled-components"
 
-import Header from "./header"
-import "./layout.css"
+import theme from "./styles/Theme"
+import GlobalStyle from "./styles/Golbal"
 
-const Layout = ({ children }) => (
+import Header from "./Header/header"
+
+const Layout = ({ children, location }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -25,22 +21,23 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-          }}
-        >
-          <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
-        </div>
+        <ThemeProvider theme={theme}>
+          <React.Fragment>
+            <GlobalStyle />
+            <Header
+              location={location ? location.pathname : "/"}
+              siteTitle={data.site.siteMetadata.title}
+            />
+            <div>
+              <main>{children}</main>
+              <footer>
+                © {new Date().getFullYear()}, Built with
+                {` `}
+                <a href="https://www.gatsbyjs.org">Gatsby</a>
+              </footer>
+            </div>
+          </React.Fragment>
+        </ThemeProvider>
       </>
     )}
   />
