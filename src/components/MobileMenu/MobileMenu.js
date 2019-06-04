@@ -1,6 +1,5 @@
 import React, { useState } from "react"
-import { StaticQuery, graphql, Link } from "gatsby"
-import Img from "gatsby-image"
+import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import { useSpring, animated } from "react-spring"
 
@@ -66,16 +65,6 @@ const MobileMenu = ({ location }) => {
               object_slug
             }
           }
-
-          ironEagleLogo: file(
-            relativePath: { eq: "iron-eagle-heating-air-conditioning.png" }
-          ) {
-            childImageSharp {
-              fluid(maxWidth: 500) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
         }
       `}
       render={data => {
@@ -90,7 +79,7 @@ const MobileMenu = ({ location }) => {
                 Menu
               </MobileButton>
               <animated.nav className="mobile-nav__drawer" style={slideNavOpen}>
-                <MobileLogo ironEagleLogo={data.ironEagleLogo} />
+                <MobileLogo />
                 <ul className="mobile-nav__drawer--items">
                   {menuItems.map(item => {
                     return (

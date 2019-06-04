@@ -7,13 +7,9 @@ const MainLogoStyled = styled.div`
   width: 100%;
   max-width: 35rem;
   margin: 2rem auto;
-
-  @media (min-width: ${props => props.theme.bpDesksm}) {
-    width: calc(20%);
-  }
 `
 
-const MainLogo = props => {
+const MainLogo = () => {
   return (
     <StaticQuery
       query={graphql`

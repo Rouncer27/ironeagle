@@ -1,23 +1,46 @@
 import styled from "styled-components"
 
-const TwoSpanButtons = styled.div`
+const UnderlineLinks = styled.div`
   a {
     display: inline-block;
-    color: #d67c5b;
+    position: relative;
+    padding: 1rem 3rem 0;
+    transition: all 0.3s ease;
+    color: #363636;
+    font-family: ${props => props.theme.fontPrim};
+    font-size: 2.4rem;
+    text-align: center;
+    text-transform: uppercase;
 
-    span:first-of-type {
-      text-transform: uppercase;
+    @media (min-width: ${props => props.theme.bpDesksm}) {
+      font-size: 2rem;
     }
 
-    span:last-of-type {
-      font-family: ${props => props.theme.fontSec};
-      font-style: italic;
+    @media (min-width: ${props => props.theme.bpDeskmd}) {
+      font-size: 2.2rem;
+    }
+
+    &::after {
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: -1rem;
+      left: 0;
+      width: 15rem;
+      height: 1rem;
+      margin: 0 auto;
+      transition: all 0.3s ease;
+      background: ${props => props.theme.colorPrim};
+      content: "";
     }
 
     &:hover {
-      color: ${props => props.theme.white};
+      color: ${props => props.theme.colorSec};
+      &::after {
+        background: ${props => props.theme.colorSec};
+      }
     }
   }
 `
 
-export { TwoSpanButtons }
+export { UnderlineLinks }

@@ -1,7 +1,6 @@
 import React from "react"
-import Img from "gatsby-image"
-import { Link } from "gatsby"
 import styled from "styled-components"
+import MainLogo from "../MainLogo/MainLogo"
 
 const MobileLogoStyled = styled.div`
   width: 100%;
@@ -10,15 +9,10 @@ const MobileLogoStyled = styled.div`
   padding: 2rem;
 `
 
-const MobileLogo = props => {
+const MobileLogo = () => {
   return (
     <MobileLogoStyled className="mobile-logo">
-      <Link to="/">
-        <Img
-          fluid={props.ironEagleLogo.childImageSharp.fluid}
-          alt="Iron Eagle Heating & Air Conditioning."
-        />
-      </Link>
+      <MainLogo />
     </MobileLogoStyled>
   )
 }

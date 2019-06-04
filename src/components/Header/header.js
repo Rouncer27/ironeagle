@@ -2,7 +2,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
 
-import MainLogo from "./MainLogo/MainLogo"
+import MainNavLogo from "./MainNavLogo/MainNavLogo"
 import MainNav from "./MainNav/MainNav"
 import MobileMenu from "../MobileMenu/MobileMenu"
 
@@ -17,12 +17,16 @@ const MainNavigationWrapper = styled.div`
     margin: 0 auto;
     padding: 0 2rem;
   }
+
+  @media (min-width: ${props => props.theme.bpDeskmd}) {
+    max-width: 110rem;
+  }
 `
 
 const Header = ({ siteTitle, location }) => (
   <header>
     <MainNavigationWrapper>
-      <MainLogo />
+      <MainNavLogo />
       <MainNav location={location} />
     </MainNavigationWrapper>
     <MobileMenu location={location} />

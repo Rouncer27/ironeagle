@@ -15,6 +15,10 @@ const MainNavItemStyled = styled.li`
     font-size: 1em;
     font-weight: 700;
 
+    @media (min-width: ${props => props.theme.bpDesksm}) {
+      font-weight: 700;
+    }
+
     &:hover {
       background: ${props =>
         props.isCurrent
