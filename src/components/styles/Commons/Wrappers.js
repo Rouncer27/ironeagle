@@ -44,4 +44,40 @@ const FullScreenWrapper = styled.div`
   }
 `
 
-export { StandardWrapper, FullScreenWrapper }
+const MicroContainer = styled.div`
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+
+  @media (min-width: ${props => props.theme.bpDesksm}) {
+    max-width: 60rem;
+  }
+`
+
+const TinyContainer = styled.div`
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+
+  @media (min-width: ${props => props.theme.bpDesksm}) {
+    max-width: 70rem;
+  }
+`
+
+const SmallContainer = styled.div`
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+
+  @media (min-width: ${props => props.theme.bpDesksm}) {
+    max-width: 85rem;
+  }
+`
+
+export {
+  StandardWrapper,
+  FullScreenWrapper,
+  MicroContainer,
+  TinyContainer,
+  SmallContainer,
+}

@@ -60,4 +60,50 @@ const RegularH2Title = styled.h2`
   }
 `
 
-export { TinyH2Title, BigH2Title, RegularH2Title }
+const RegularH2TitleBlue = styled(RegularH2Title)`
+  color: ${props => props.theme.colorPrim};
+`
+
+const SmallH2Title = styled.h2`
+  color: ${props => props.theme.black};
+  font-family: ${props => props.theme.fontSec};
+  font-weight: 700;
+  font-size: 2.2rem;
+  line-height: 1.14;
+
+  @media (min-width: ${props => props.theme.bpTablet}) {
+    font-size: 3.2rem;
+  }
+
+  @media (min-width: ${props => props.theme.bpDesksm}) {
+    font-size: 3.6rem;
+  }
+
+  @media (min-width: ${props => props.theme.bpDeskmd}) {
+    font-size: 4rem;
+  }
+`
+
+const SmallH3Title = styled.h3`
+  color: ${props => props.theme.black};
+  font-family: ${props => props.theme.fontSec};
+  font-size: 1.6rem;
+  font-weight: 500;
+
+  @media (min-width: ${props => props.theme.bpTablet}) {
+    font-size: 1.6rem;
+  }
+
+  @media (min-width: ${props => props.theme.bpDesksm}) {
+    font-size: 2rem;
+  }
+`
+
+export {
+  TinyH2Title,
+  BigH2Title,
+  RegularH2Title,
+  RegularH2TitleBlue,
+  SmallH2Title,
+  SmallH3Title,
+}
