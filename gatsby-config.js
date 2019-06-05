@@ -5,8 +5,8 @@ if (process.env.NODE_ENV === "development") {
   BASE_URL = "localhost/ironeagle"
   PORTOCOL = "http"
 } else {
-  BASE_URL = "localhost/ironeagle"
-  PORTOCOL = "https"
+  BASE_URL = "dedi105.canspace.ca/~ironeagleswbcrea/database"
+  PORTOCOL = "http"
 }
 
 module.exports = {
