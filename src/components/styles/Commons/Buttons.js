@@ -4,13 +4,17 @@ const UnderlineLinks = styled.div`
   a {
     display: inline-block;
     position: relative;
-    padding: 1rem 3rem 0;
+    padding: 1rem 0 0;
     transition: all 0.3s ease;
     color: #363636;
     font-family: ${props => props.theme.fontPrim};
     font-size: 2.4rem;
     text-align: center;
     text-transform: uppercase;
+
+    @media (min-width: ${props => props.theme.bpTablet}) {
+      font-size: 1.8rem;
+    }
 
     @media (min-width: ${props => props.theme.bpDesksm}) {
       font-size: 2rem;

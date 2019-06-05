@@ -13,8 +13,8 @@ const StyledFooterAddress = styled.div`
 
   @media (min-width: ${props => props.theme.bpTablet}) {
     position: relative;
-    width: 50%;
-    margin-bottom: 0;
+    width: calc(33.33% - 1.5rem);
+    margin: 0 0.75rem;
     padding-bottom: 3rem;
     text-align: left;
   }
@@ -25,11 +25,20 @@ const StyledFooterAddress = styled.div`
   }
 
   address {
+    margin-bottom: 1.6rem;
     color: ${props => props.theme.black};
     font-family: ${props => props.theme.fontPrim};
     font-style: normal;
     font-weight: 300;
     line-height: 1.56;
+
+    @media (min-width: ${props => props.theme.bpTablet}) {
+      font-size: 1.4rem;
+    }
+
+    @media (min-width: ${props => props.theme.bpDesksm}) {
+      font-size: 1.6rem;
+    }
 
     .street-address {
       display: block;
@@ -38,6 +47,17 @@ const StyledFooterAddress = styled.div`
       &__phone {
         display: block;
       }
+
+      &__phone {
+        a {
+          color: ${props => props.theme.black};
+          font-weight: bold;
+
+          &:hover {
+            color: ${props => props.theme.colorSec};
+          }
+        }
+      }
     }
   }
 
@@ -45,10 +65,6 @@ const StyledFooterAddress = styled.div`
     margin-top: 1rem;
 
     @media (min-width: ${props => props.theme.bpDesksm}) {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      left: 0;
       margin: 0 auto;
     }
   }
@@ -82,7 +98,10 @@ const FooterAddress = () => {
             </span>
           </span>
           <span className="street-address__phone">
-            Phone 24/7: <span itemProp="telephone">403.948.1333</span>
+            Phone 24/7:{" "}
+            <a href="tel:+14039481333" itemProp="telephone">
+              403.948.1333
+            </a>
           </span>
         </span>
       </address>

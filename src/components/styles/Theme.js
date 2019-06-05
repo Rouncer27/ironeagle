@@ -19,6 +19,7 @@ const theme = {
   fontPrim: "Open Sans",
   fontSec: "Poppins",
   fontAwesome: "FontAwesome",
+  yelloBoarder: "solid 1.5rem #ffe05d",
 }
 
 export default theme

@@ -21,12 +21,19 @@ const FooterStyled = styled.footer`
 
     @media (min-width: ${props => props.theme.bpTablet}) {
       width: 50%;
+      max-width: 20rem;
+      margin-right: 25%;
+      margin-bottom: 2.5rem;
+      margin-left: 25%;
       text-align: left;
     }
 
     @media (min-width: ${props => props.theme.bpDesksm}) {
       width: calc(16% - 4rem);
+      max-width: 20rem;
       margin-right: 4rem;
+      margin-bottom: 0;
+      margin-left: 0;
     }
 
     @media (min-width: ${props => props.theme.bpDeskmd}) {

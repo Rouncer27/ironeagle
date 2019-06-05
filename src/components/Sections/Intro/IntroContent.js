@@ -1,0 +1,38 @@
+import React from "react"
+import styled from "styled-components"
+
+import IntroTitle from "./IntroTitle"
+import IntroParagraph from "./IntroParagraph"
+import IntroLink from "./IntroLink"
+import IntroYellowCall from "./IntroYellowCall"
+
+const IntroContentStyled = styled.div`
+  width: 100%;
+
+  @media (min-width: ${props => props.theme.bpTablet}) {
+    width: 60%;
+  }
+
+  @media (min-width: ${props => props.theme.bpDesksm}) {
+    width: 60%;
+  }
+`
+
+const IntroContent = ({
+  title,
+  paraContent,
+  linkContent,
+  linkURL,
+  yellowContent,
+}) => {
+  return (
+    <IntroContentStyled>
+      <IntroTitle content={title} />
+      <IntroParagraph content={paraContent} />
+      <IntroLink content={linkContent} url={linkURL} />
+      <IntroYellowCall content={yellowContent} />
+    </IntroContentStyled>
+  )
+}
+
+export default IntroContent

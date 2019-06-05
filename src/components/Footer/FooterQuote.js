@@ -14,9 +14,9 @@ const StyledFooterQuote = styled.div`
 
   @media (min-width: ${props => props.theme.bpTablet}) {
     position: relative;
-    width: 50%;
+    width: calc(33.33% - 1.5rem);
     max-width: 100%;
-    margin-bottom: 0;
+    margin: 0 0.75rem;
     padding-bottom: 3rem;
     text-align: left;
   }
@@ -28,10 +28,6 @@ const StyledFooterQuote = styled.div`
 
   .quote-link {
     @media (min-width: ${props => props.theme.bpDesksm}) {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      left: 0;
       margin: 0 auto;
     }
   }
