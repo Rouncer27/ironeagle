@@ -27,10 +27,12 @@ const IntroContent = ({
 }) => {
   return (
     <IntroContentStyled>
-      <IntroTitle content={title} />
-      <IntroParagraph content={paraContent} />
-      <IntroLink content={linkContent} url={linkURL} />
-      <IntroYellowCall content={yellowContent} />
+      {title && <IntroTitle content={title} />}
+      {paraContent && <IntroParagraph content={paraContent} />}
+      {linkContent && linkURL && (
+        <IntroLink content={linkContent} url={linkURL} />
+      )}
+      {yellowContent && <IntroYellowCall content={yellowContent} />}
     </IntroContentStyled>
   )
 }

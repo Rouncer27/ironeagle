@@ -6,12 +6,9 @@ import IntroGraphicVideo from "../../Sections/Intro/IntroGraphicVideo"
 import backgroundVideo from "../../../images/fan-video.mp4"
 
 const Intro = () => {
-  const title =
-    "We Install, Maintain + Repair Furnaces, HVAC systems, & much more!"
+  const title = "You can rely on us. We are dedicated."
   const paraContent =
-    "Iron Eagle has continued to provide customers with quality work and fair prices on repairs, new furnaces, air conditioners, HVAC systems, and refrigeration of all types."
-  const linkContent = "403.948.1333"
-  const linkURL = "tel+14039481333"
+    "Our name is Iron Eagle. “Iron” represents the physical metal product and “Eagle” symbolizes strength. Together, they represent our passion."
   const yellowContent = "Guaranteed <span>24/7 Emergency</span> repair!"
   return (
     <section>
@@ -19,8 +16,6 @@ const Intro = () => {
         <IntroContent
           title={title}
           paraContent={paraContent}
-          linkContent={linkContent}
-          linkURL={linkURL}
           yellowContent={yellowContent}
         />
         <IntroGraphicVideo video={backgroundVideo} />
