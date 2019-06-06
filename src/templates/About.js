@@ -6,6 +6,7 @@ import Intro from "../components/Pages/About/Intro"
 import Services from "../components/Pages/About/Services"
 import Peace from "../components/Pages/About/Peace"
 import Serving from "../components/Pages/About/Serving"
+import Referral from "../components/Pages/About/Referral"
 
 export default class About extends Component {
   render() {
@@ -16,6 +17,7 @@ export default class About extends Component {
         <Services />
         <Peace />
         <Serving />
+        <Referral />
       </Layout>
     )
   }

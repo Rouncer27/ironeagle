@@ -6,6 +6,7 @@ import backgroundImage from "../../../images/Iron-eagle-gages.png"
 import { MicroContainer } from "../../styles/Commons/Wrappers"
 import { UnderlineLinks } from "../../styles/Commons/Buttons"
 import { SmallH2Title } from "../../styles/Commons/Titles"
+import { BigBlueDoubleQuote } from "../../styles/Commons/Effects"
 
 const ReferralStyled = styled.section`
   position: relative;
@@ -31,45 +32,6 @@ const ReferralStyled = styled.section`
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-    }
-  }
-
-  .referral-title {
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
-
-    &::after {
-      position: absolute;
-      top: -7.5rem;
-      right: 0;
-      left: 0;
-      width: 5.5rem;
-      height: 5.5rem;
-      margin: 0 auto;
-      color: ${props => props.theme.colorPrim};
-      font-family: ${props => props.theme.fontSec};
-      font-size: 17.5rem;
-      line-height: 1;
-      content: "“";
-    }
-
-    @media (min-width: ${props => props.theme.bpTablet}) {
-      &::after {
-        top: -10rem;
-        width: 6.5rem;
-        height: 6.5rem;
-        font-size: 20rem;
-      }
-    }
-
-    @media (min-width: ${props => props.theme.bpDesksm}) {
-      &::after {
-        top: -10rem;
-        width: 7.5rem;
-        height: 7.5rem;
-        font-size: 25rem;
-      }
     }
   }
 
@@ -153,10 +115,12 @@ const Referral = () => {
     <ReferralStyled>
       <div className="referral-content">
         <MicroContainer className="referral-title">
-          <SmallH2Title>
-            We are a referral business, so our success depends on your
-            satisfaction.
-          </SmallH2Title>
+          <BigBlueDoubleQuote>
+            <SmallH2Title>
+              We are a referral business, so our success depends on your
+              satisfaction.
+            </SmallH2Title>
+          </BigBlueDoubleQuote>
         </MicroContainer>
         <UnderlineLinks className="referral-link">
           <Link to="/testimonials">Read Reviews</Link>
