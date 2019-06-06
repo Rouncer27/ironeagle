@@ -10,7 +10,7 @@ import { StandardParagraph } from "../../styles/Commons/Paragraphs"
 
 const Peace = () => {
   return (
-    <div>
+    <section>
       <StandardWrapper>
         <SmallContainer>
           <RegularH3Title>Your peace of mind is our priority.</RegularH3Title>
@@ -24,7 +24,7 @@ const Peace = () => {
           </StandardParagraph>
         </TinyContainer>
       </StandardWrapper>
-    </div>
+    </section>
   )
 }
 

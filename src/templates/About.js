@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 import Intro from "../components/Pages/About/Intro"
 import Services from "../components/Pages/About/Services"
 import Peace from "../components/Pages/About/Peace"
+import Serving from "../components/Pages/About/Serving"
 
 export default class About extends Component {
   render() {
@@ -14,6 +15,7 @@ export default class About extends Component {
         <Intro />
         <Services />
         <Peace />
+        <Serving />
       </Layout>
     )
   }
