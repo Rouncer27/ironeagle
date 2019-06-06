@@ -6,6 +6,7 @@ import { StandardWrapper } from "../../styles/Commons/Wrappers"
 import { RegularH2Title } from "../../styles/Commons/Titles"
 import { StandardParagraph } from "../../styles/Commons/Paragraphs"
 import { UnderlineLinks } from "../../styles/Commons/Buttons"
+import { AngleGreyBackground } from "../../styles/Commons/Effects"
 import LocallyOwned from "../../Logos/LocallyOwned"
 
 const QuoteStyled = styled.section`
@@ -74,19 +75,6 @@ const QuoteStyled = styled.section`
       bottom: -7.5rem;
     }
   }
-
-  .quote-background {
-    position: absolute;
-    top: 0%;
-    right: 0;
-    left: -25%;
-    width: 150%;
-    height: 85%;
-    margin: 0 auto;
-    background: #f8f8f8;
-    transform: rotate(-10deg);
-    z-index: -1;
-  }
 `
 
 const Quote = () => {
@@ -110,7 +98,7 @@ const Quote = () => {
           <LocallyOwned />
         </div>
       </StandardWrapper>
-      <div className="quote-background" />
+      <AngleGreyBackground />
     </QuoteStyled>
   )
 }

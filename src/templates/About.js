@@ -3,6 +3,8 @@ import React, { Component } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Intro from "../components/Pages/About/Intro"
+import Services from "../components/Pages/About/Services"
+import Peace from "../components/Pages/About/Peace"
 
 export default class About extends Component {
   render() {
@@ -10,6 +12,8 @@ export default class About extends Component {
       <Layout location={this.props.location}>
         <SEO title="About Page" />
         <Intro />
+        <Services />
+        <Peace />
       </Layout>
     )
   }

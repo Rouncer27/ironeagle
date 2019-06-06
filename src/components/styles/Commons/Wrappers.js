@@ -72,6 +72,10 @@ const SmallContainer = styled.div`
   @media (min-width: ${props => props.theme.bpDesksm}) {
     max-width: 85rem;
   }
+
+  @media (min-width: ${props => props.theme.bpDeskmd}) {
+    max-width: 90rem;
+  }
 `
 
 export {

@@ -84,6 +84,46 @@ const SmallH2Title = styled.h2`
   }
 `
 
+const SmallerH2Title = styled.h2`
+  color: ${props => props.theme.black};
+  font-family: ${props => props.theme.fontSec};
+  font-weight: 700;
+  font-size: 2.2rem;
+  line-height: 1.14;
+
+  @media (min-width: ${props => props.theme.bpTablet}) {
+    font-size: 2.4rem;
+  }
+
+  @media (min-width: ${props => props.theme.bpDesksm}) {
+    font-size: 2.6rem;
+  }
+
+  @media (min-width: ${props => props.theme.bpDeskmd}) {
+    font-size: 2.8rem;
+  }
+`
+
+const RegularH3Title = styled.h3`
+  color: ${props => props.theme.black};
+  font-family: ${props => props.theme.fontSec};
+  font-weight: 700;
+  font-size: 2.8rem;
+  line-height: 1.14;
+
+  @media (min-width: ${props => props.theme.bpTablet}) {
+    font-size: 3.6rem;
+  }
+
+  @media (min-width: ${props => props.theme.bpDesksm}) {
+    font-size: 4.4rem;
+  }
+
+  @media (min-width: ${props => props.theme.bpDeskmd}) {
+    font-size: 4.8rem;
+  }
+`
+
 const SmallH3Title = styled.h3`
   color: ${props => props.theme.black};
   font-family: ${props => props.theme.fontSec};
@@ -105,5 +145,7 @@ export {
   RegularH2Title,
   RegularH2TitleBlue,
   SmallH2Title,
+  SmallerH2Title,
   SmallH3Title,
+  RegularH3Title,
 }
