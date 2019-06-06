@@ -10,10 +10,11 @@ import { BigBlueDoubleQuote } from "../../styles/Commons/Effects"
 
 const ReferralStyled = styled.section`
   position: relative;
-  height: 65rem;
+  height: 40rem;
+  ${"" /* overflow: hidden; */}
 
   @media (min-width: ${props => props.theme.bpTablet}) {
-    height: 55rem;
+    height: 50rem;
   }
 
   @media (min-width: ${props => props.theme.bpDesksm}) {
@@ -58,8 +59,18 @@ const ReferralStyled = styled.section`
       height: 250%;
 
       @media (min-width: ${props => props.theme.bpTablet}) {
-        width: 100%;
-        height: 100%;
+        width: 150%;
+        height: 150%;
+      }
+
+      @media (min-width: ${props => props.theme.bpDesksm}) {
+        width: 125%;
+        height: 125%;
+      }
+
+      @media (min-width: ${props => props.theme.bpDeskmd}) {
+        width: 110%;
+        height: 110%;
       }
     }
   }
