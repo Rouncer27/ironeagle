@@ -69,6 +69,10 @@ const SmallContainer = styled.div`
   margin: 0 auto;
   text-align: center;
 
+  @media (min-width: ${props => props.theme.bpTablet}) {
+    max-width: 75rem;
+  }
+
   @media (min-width: ${props => props.theme.bpDesksm}) {
     max-width: 85rem;
   }
