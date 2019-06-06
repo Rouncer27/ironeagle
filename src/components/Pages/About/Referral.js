@@ -43,7 +43,7 @@ const ReferralStyled = styled.section`
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.15;
+    opacity: 0.1;
     z-index: -1;
 
     @media (min-width: ${props => props.theme.bpTablet}) {
