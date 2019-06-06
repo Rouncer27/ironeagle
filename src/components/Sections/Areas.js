@@ -1,12 +1,20 @@
 import React from "react"
 import styled from "styled-components"
 
-import { StandardWrapper } from "../../styles/Commons/Wrappers"
-import WaveSingle from "../../Svgs/WaveSingle"
+import { StandardWrapper } from "../styles/Commons/Wrappers"
+import { RegularH2TitleBlue } from "../styles/Commons/Titles"
+import WaveSingle from "../Svgs/WaveSingle"
 
 const AreasStyled = styled.div`
   padding: 2rem 0;
   box-shadow: 0 0.3rem 1rem 0 rgba(0, 0, 0, 0.16);
+
+  .areas-title {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+  }
 
   .areas-names {
     display: flex;
@@ -72,9 +80,21 @@ const AreasStyled = styled.div`
   }
 `
 
-const Areas = () => {
+const Areas = ({ location }) => {
+  let areasTitle = false
+  if (
+    location.pathname === "/what-we-do" ||
+    location.pathname === "/what-we-do/"
+  ) {
+    areasTitle = (
+      <div className="areas-title">
+        <RegularH2TitleBlue>Areas Of Work</RegularH2TitleBlue>
+      </div>
+    )
+  }
   return (
     <AreasStyled>
+      {areasTitle && areasTitle}
       <StandardWrapper>
         <div className="areas-names">
           <div className="areas-name">

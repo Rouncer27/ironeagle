@@ -6,7 +6,7 @@ import Intro from "../components/Pages/Home/Intro"
 import Quote from "../components/Pages/Home/Quote"
 import Specialties from "../components/Pages/Home/Specialties"
 import Quality from "../components/Pages/Home/Quality"
-import Areas from "../components/Pages/Home/Areas"
+import Areas from "../components/Sections/Areas"
 import Referral from "../components/Pages/Home/Referral"
 
 const IndexPage = props => (
@@ -16,7 +16,7 @@ const IndexPage = props => (
     <Quote />
     <Specialties />
     <Quality />
-    <Areas />
+    <Areas location={props.location} />
     <Referral />
   </Layout>
 )
