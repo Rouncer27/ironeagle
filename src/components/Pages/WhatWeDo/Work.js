@@ -7,7 +7,7 @@ import "../../../../node_modules/slick-carousel/slick/slick.css"
 import "../../../../node_modules/slick-carousel/slick/slick-theme.css"
 
 import { RegularH2TitleBlue } from "../../styles/Commons/Titles"
-import { StandardWrapper } from "../../styles/Commons/Wrappers"
+import { FullScreenWrapper } from "../../styles/Commons/Wrappers"
 import { StandardParagraph } from "../../styles/Commons/Paragraphs"
 import { AngleGreyBackground } from "../../styles/Commons/Effects"
 
@@ -15,6 +15,13 @@ const WorkStyled = styled.section`
   position: relative;
   margin-bottom: 5rem;
   z-index: 5;
+
+  @media (min-width: ${props => props.theme.bpTablet}) {
+  }
+
+  @media (min-width: ${props => props.theme.bpDesksm}) {
+    margin-bottom: 15rem;
+  }
 
   .work-title,
   .work-content {
@@ -24,20 +31,69 @@ const WorkStyled = styled.section`
 
   .work-slider {
     width: 100%;
+    padding-top: 2.5rem;
+
+    .slick-track {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .slick-slide {
+      .work-slide {
+        transform: scale(0.7);
+        transition: all 0.4s ease;
+      }
+    }
+
+    .slick-center {
+      .work-slide {
+        transform: scale(1.1);
+      }
+    }
   }
 
   .work-background {
     top: auto;
-    bottom: 5rem;
+    bottom: 0;
     max-height: 40rem;
     background: #00adef;
   }
 `
 
 const Work = ({ images }) => {
+  const settings = {
+    centerPadding: `0px`,
+    autoplay: true,
+    autoplaySpeed: 10000,
+    speed: 750,
+    infinite: true,
+    adaptiveHeight: false,
+    slidesToShow: 3,
+    arrows: true,
+    centerMode: true,
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          centerMode: true,
+          slidesToShow: 1,
+        },
+      },
+    ],
+  }
+
   return (
     <WorkStyled>
-      <StandardWrapper>
+      <FullScreenWrapper className="work-wrapper">
         <div className="work-title">
           <RegularH2TitleBlue>Work We’ve Done</RegularH2TitleBlue>
         </div>
@@ -46,21 +102,10 @@ const Work = ({ images }) => {
             Here are some of the projects we have worked on.{" "}
           </StandardParagraph>
         </div>
-        <Slider
-          className="work-slider"
-          slidesToShow={1}
-          autoplay={true}
-          autoplaySpeed={10000}
-          speed={750}
-          arrows={false}
-          adaptiveHeight={false}
-          centerPadding={`0px`}
-          centerMode={false}
-          dots={true}
-        >
+        <Slider {...settings} className="work-slider">
           {images.map((img, index) => {
             return (
-              <div key={index}>
+              <div key={index} className="work-slide">
                 <Img
                   fluid={img.image.localFile.childImageSharp.fluid}
                   alt={img.image.alt_text}
@@ -69,7 +114,7 @@ const Work = ({ images }) => {
             )
           })}
         </Slider>
-      </StandardWrapper>
+      </FullScreenWrapper>
       <AngleGreyBackground className="work-background" />
     </WorkStyled>
   )
