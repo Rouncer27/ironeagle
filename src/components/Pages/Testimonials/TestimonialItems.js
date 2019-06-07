@@ -14,6 +14,18 @@ const TestimonialItemsStyled = styled.div`
     position: relative;
     width: 100%;
   }
+
+  .test-row:nth-of-type(2n + 1) {
+    z-index: 5;
+  }
+
+  .test-row:nth-of-type(2n + 2) {
+    z-index: 1;
+    .test-background {
+      transform: rotate(10deg);
+      background: #00adef;
+    }
+  }
 `
 
 const TestimonialItems = props => {
@@ -46,7 +58,7 @@ const TestimonialItems = props => {
                   />
                 )
               })}
-              <AngleGreyBackground />
+              <AngleGreyBackground className="test-background" />
             </div>
           )
         })}
