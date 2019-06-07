@@ -63,6 +63,11 @@ const MobileMenu = ({ location }) => {
               wordpress_id
               title
               object_slug
+              wordpress_children {
+                wordpress_id
+                title
+                object_slug
+              }
             }
           }
         }

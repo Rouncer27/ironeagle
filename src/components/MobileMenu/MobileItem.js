@@ -1,12 +1,16 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
+import { Link } from "gatsby"
+
+import MobileSubMenu from "./MobileSubMenu"
 
 const MobileItemStyled = styled.li`
+  position: relative;
   width: 100%;
   align-self: center;
   font-size: 2.4rem;
   text-align: center;
+  overflow: hidden;
 
   a {
     display: block;
@@ -36,12 +40,20 @@ const MobileItemStyled = styled.li`
 `
 
 const MobileItem = props => {
-  const { object_slug, title, location } = props
+  const { object_slug, title, location, wordpress_children } = props
   const currentPageSlug = object_slug === "home" ? "/" : `/${object_slug}`
   const isCurrent = currentPageSlug === location ? true : false
+
   return (
     <MobileItemStyled isCurrent={isCurrent}>
       <Link to={object_slug === "home" ? "/" : `/${object_slug}`}>{title}</Link>
+      {wordpress_children !== null && (
+        <MobileSubMenu
+          items={wordpress_children}
+          currentPageSlug={currentPageSlug}
+          location={location}
+        />
+      )}
     </MobileItemStyled>
   )
 }
