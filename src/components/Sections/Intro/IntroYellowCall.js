@@ -17,6 +17,7 @@ const IntroYellowCallStyled = styled.div`
   }
 
   p {
+    font-family: ${props => props.theme.fontSec};
     font-weight: bold;
     margin: 0;
     font-size: 1.8rem;
@@ -33,6 +34,20 @@ const IntroYellowCallStyled = styled.div`
       color: ${props => props.theme.colorPrim};
     }
   }
+
+  p.emergency-number {
+    font-weight: bold;
+    margin: 0;
+    font-size: 1.8rem;
+
+    @media (min-width: ${props => props.theme.bpTablet}) {
+      font-size: 2rem;
+    }
+
+    @media (min-width: ${props => props.theme.bpDesksm}) {
+      font-size: 4.6rem;
+    }
+  }
 `
 
 const IntroYellowCall = ({ content, location }) => {
@@ -45,7 +60,7 @@ const IntroYellowCall = ({ content, location }) => {
   return (
     <IntroYellowCallStyled>
       <p dangerouslySetInnerHTML={{ __html: content }} />
-      {emergencyNumber && <p className="emergency-number">403.948.133</p>}
+      {emergencyNumber && <p className="emergency-number">403.948.1333</p>}
     </IntroYellowCallStyled>
   )
 }

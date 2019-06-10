@@ -5,8 +5,10 @@ import IntroTitle from "./IntroTitle"
 import IntroParagraph from "./IntroParagraph"
 import IntroLink from "./IntroLink"
 import IntroYellowCall from "./IntroYellowCall"
+import IntroNotWorking from "./IntroNotWorking"
 
 const IntroContentStyled = styled.div`
+  position: relative;
   width: 100%;
 
   @media (min-width: ${props => props.theme.bpTablet}) {
@@ -26,6 +28,12 @@ const IntroContent = ({
   yellowContent,
   location,
 }) => {
+  let notWorking = false
+  if (location !== undefined) {
+    if (location.pathname === "/contact" || location.pathname === "/contact/") {
+      notWorking = true
+    }
+  }
   return (
     <IntroContentStyled>
       {title && <IntroTitle content={title} />}
@@ -36,6 +44,7 @@ const IntroContent = ({
       {yellowContent && (
         <IntroYellowCall content={yellowContent} location={location} />
       )}
+      {notWorking && <IntroNotWorking />}
     </IntroContentStyled>
   )
 }

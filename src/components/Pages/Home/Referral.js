@@ -129,7 +129,7 @@ const Referral = () => {
       <div className="referral-login">
         <p>Employee Access</p>
         <UnderlineLinks className="referral-login--link">
-          <a href="http://ironeagle.ca/wp-admin">Log In</a>
+          <a href="http://ironeagle.ca/water-cooler/">Log In</a>
         </UnderlineLinks>
       </div>
 
