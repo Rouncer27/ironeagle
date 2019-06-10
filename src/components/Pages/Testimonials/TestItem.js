@@ -6,18 +6,21 @@ import { BigBlueDoubleQuote } from "../../styles/Commons/Effects"
 const TestItemStyled = styled.div`
   position: relative;
   width: 100%;
-  padding: 2rem 0;
+  padding: 12rem 0 10rem;
+  margin: 2rem auto;
   background: ${props => props.theme.white};
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
 
   @media (min-width: ${props => props.theme.bpTablet}) {
-    width: calc(33.3333% - 4rem);
-    margin: 2rem;
-    padding: 5rem 0;
+    width: calc(33.3333% - 2rem);
+    margin: 1rem;
+    padding: 12rem 0 6rem;
   }
 
   @media (min-width: ${props => props.theme.bpDesksm}) {
-    padding: 12rem 0 5rem;
+    width: calc(33.3333% - 4rem);
+    margin: 2rem;
+    padding: 12rem 0 8rem;
   }
 
   .test-content {
@@ -33,7 +36,7 @@ const TestItemStyled = styled.div`
       line-height: 1.5;
 
       @media (min-width: ${props => props.theme.bpTablet}) {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
       }
 
       @media (min-width: ${props => props.theme.bpDesksm}) {
@@ -43,6 +46,10 @@ const TestItemStyled = styled.div`
   }
 
   .test-name {
+    position: absolute;
+    right: 0;
+    bottom: 2rem;
+    left: 0;
     text-align: center;
     p {
       display: inline-block;
@@ -58,7 +65,7 @@ const TestItemStyled = styled.div`
       line-height: 1.31;
 
       @media (min-width: ${props => props.theme.bpTablet}) {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
       }
 
       @media (min-width: ${props => props.theme.bpDesksm}) {

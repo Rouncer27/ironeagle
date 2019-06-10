@@ -48,8 +48,12 @@ const AngleGreyBackground = styled.div`
   height: 85%;
   margin: 0 auto;
   background: #f8f8f8;
-  transform: rotate(-10deg);
+  transform: rotate(0);
   z-index: -1;
+
+  @media (min-width: ${props => props.theme.bpTablet}) {
+    transform: rotate(-10deg);
+  }
 `
 
 export { BigBlueDoubleQuote, AngleGreyBackground }

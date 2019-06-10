@@ -22,8 +22,12 @@ const TestimonialItemsStyled = styled.div`
   .test-row:nth-of-type(2n + 2) {
     z-index: 1;
     .test-background {
-      transform: rotate(10deg);
+      transform: rotate(0);
       background: #00adef;
+
+      @media (min-width: ${props => props.theme.bpTablet}) {
+        transform: rotate(10deg);
+      }
     }
   }
 `
