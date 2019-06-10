@@ -3,11 +3,19 @@ import GoogleMapReact from "google-map-react"
 import styled from "styled-components"
 
 import { StandardWrapper } from "../../styles/Commons/Wrappers"
+import { SmallH1TitleBlue } from "../../styles/Commons/Titles"
+import { AngleGreyBackground } from "../../styles/Commons/Effects"
 
 const LocationStyled = styled.section`
+  position: relative;
   width: 100%;
   @media (min-width: ${props => props.theme.bpTablet}) {
-    padding-top: 10rem;
+    margin-top: 10rem;
+  }
+
+  @media (min-width: ${props => props.theme.bpDesksm}) {
+    margin-top: 15rem;
+    margin-bottom: 5rem;
   }
 
   .location-wrapper {
@@ -18,7 +26,8 @@ const LocationStyled = styled.section`
     width: 100%;
 
     @media (min-width: ${props => props.theme.bpTablet}) {
-      width: 50%;
+      width: calc(50% - 4rem);
+      margin-right: 4rem;
     }
   }
 
@@ -26,12 +35,77 @@ const LocationStyled = styled.section`
     width: 100%;
 
     @media (min-width: ${props => props.theme.bpTablet}) {
-      width: 50%;
+      width: calc(50% - 4rem);
+      margin-left: 4rem;
+    }
+
+    &--title {
+      h1 {
+        color: ${props => props.theme.black};
+      }
+    }
+
+    .vcard {
+      span {
+        color: #363636;
+        font-family: ${props => props.theme.fontPrim};
+        font-size: 1.8rem;
+        font-weight: 300;
+        font-style: normal;
+        line-height: 1.5;
+
+        @media (min-width: ${props => props.theme.bpTablet}) {
+          font-size: 1.6rem;
+        }
+
+        @media (min-width: ${props => props.theme.bpDesksm}) {
+          font-size: 2rem;
+          line-height: 1.67;
+        }
+
+        @media (min-width: ${props => props.theme.bpDeskmd}) {
+          font-size: 2.4rem;
+        }
+
+        a {
+          color: #363636;
+          font-weight: 300;
+
+          &:hover {
+            color: ${props => props.theme.colorSec};
+          }
+        }
+      }
+
+      .street-address {
+        display: block;
+      }
+
+      .street-address__phone,
+      .street-address__wrapper {
+        display: block;
+      }
     }
   }
 `
 
-const AnyReactComponent = ({ text }) => <div>{text}</div>
+const AnyReactComponent = ({ text }) => (
+  <div
+    style={{
+      color: "white",
+      background: "#00adef",
+      padding: "15px 10px",
+      display: "inline-flex",
+      textAlign: "center",
+      alignItems: "center",
+      justifyContent: "center",
+      borderRadius: "100%",
+      transform: "translate(-50%, -50%)",
+    }}
+  >
+    {text}
+  </div>
+)
 
 class Location extends Component {
   static defaultProps = {
@@ -49,23 +123,26 @@ class Location extends Component {
           <div className="location-map">
             <div style={{ height: "400px", width: "400px" }}>
               <GoogleMapReact
-                bootstrapURLKeys={{
-                  key: "AIzaSyCUdH5JJBzezyH-kSzH8Fy9B9a-qvn3utw",
-                }}
+                // bootstrapURLKeys={{
+                //   key: "AIzaSyCUdH5JJBzezyH-kSzH8Fy9B9a-qvn3utw",
+                // }}
                 defaultCenter={this.props.center}
                 defaultZoom={this.props.zoom}
               >
                 <AnyReactComponent
-                  lat={59.955413}
-                  lng={30.337844}
-                  text="My Marker"
+                  lat={51.2903677}
+                  lng={-113.9981432}
+                  text={"Iron Eagle"}
                 />
               </GoogleMapReact>
             </div>
           </div>
           <div className="location-address">
-            <div>
-              <h1>Iron Eagle Heating, Air Conditioning, & Refrigeration</h1>
+            <div className="location-address--title">
+              <SmallH1TitleBlue>
+                Iron Eagle Heating, <br />
+                Air Conditioning, <br />& Refrigeration
+              </SmallH1TitleBlue>
             </div>
             <address
               className="vcard"
@@ -91,7 +168,7 @@ class Location extends Component {
                   </span>
                 </span>
                 <span className="street-address__phone">
-                  Phone 24/7:{" "}
+                  Telephone:{" "}
                   <a href="tel:+14039481333" itemProp="telephone">
                     403.948.1333
                   </a>
@@ -100,6 +177,7 @@ class Location extends Component {
             </address>
           </div>
         </StandardWrapper>
+        <AngleGreyBackground />
       </LocationStyled>
     )
   }

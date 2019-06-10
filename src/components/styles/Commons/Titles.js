@@ -20,6 +20,26 @@ const SmallerH1TitleBlue = styled.h1`
   }
 `
 
+const SmallH1TitleBlue = styled.h1`
+  color: ${props => props.theme.colorPrim};
+  font-family: ${props => props.theme.fontSec};
+  font-weight: 700;
+  font-size: 2.2rem;
+  line-height: 1.14;
+
+  @media (min-width: ${props => props.theme.bpTablet}) {
+    font-size: 3.2rem;
+  }
+
+  @media (min-width: ${props => props.theme.bpDesksm}) {
+    font-size: 3.6rem;
+  }
+
+  @media (min-width: ${props => props.theme.bpDeskmd}) {
+    font-size: 4rem;
+  }
+`
+
 const TinyH2Title = styled.h2`
   margin-bottom: 1rem;
   color: ${props => props.theme.black};
@@ -160,6 +180,7 @@ const SmallH3Title = styled.h3`
 `
 
 export {
+  SmallH1TitleBlue,
   SmallerH1TitleBlue,
   TinyH2Title,
   BigH2Title,
