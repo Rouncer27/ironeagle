@@ -15,7 +15,7 @@ const LocationStyled = styled.section`
 
   @media (min-width: ${props => props.theme.bpDesksm}) {
     margin-top: 15rem;
-    margin-bottom: 5rem;
+    margin-bottom: 15rem;
   }
 
   .location-wrapper {
