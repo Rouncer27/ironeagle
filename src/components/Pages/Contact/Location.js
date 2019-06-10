@@ -23,11 +23,43 @@ const LocationStyled = styled.section`
   }
 
   .location-map {
+    position: relative;
     width: 100%;
 
     @media (min-width: ${props => props.theme.bpTablet}) {
       width: calc(50% - 4rem);
       margin-right: 4rem;
+    }
+
+    .location-map--title {
+      position: absolute;
+      top: -3rem;
+      right: 0;
+      left: 0;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      z-index: 500;
+
+      p {
+        color: ${props => props.theme.black};
+        font-family: ${props => props.theme.fontSec};
+        font-weight: 700;
+        font-size: 2.8rem;
+        line-height: 1.14;
+
+        @media (min-width: ${props => props.theme.bpTablet}) {
+          font-size: 3.6rem;
+        }
+
+        @media (min-width: ${props => props.theme.bpDesksm}) {
+          font-size: 4.4rem;
+        }
+
+        @media (min-width: ${props => props.theme.bpDeskmd}) {
+          font-size: 4.8rem;
+        }
+      }
     }
   }
 
@@ -87,6 +119,11 @@ const LocationStyled = styled.section`
       }
     }
   }
+
+  .location-background {
+    top: auto;
+    bottom: 0;
+  }
 `
 
 const AnyReactComponent = ({ text }) => (
@@ -121,6 +158,9 @@ class Location extends Component {
       <LocationStyled>
         <StandardWrapper className="location-wrapper">
           <div className="location-map">
+            <div className="location-map--title">
+              <p>Find Us</p>
+            </div>
             <div style={{ height: "400px", width: "400px" }}>
               <GoogleMapReact
                 // bootstrapURLKeys={{
@@ -177,7 +217,7 @@ class Location extends Component {
             </address>
           </div>
         </StandardWrapper>
-        <AngleGreyBackground />
+        <AngleGreyBackground className="location-background" />
       </LocationStyled>
     )
   }
