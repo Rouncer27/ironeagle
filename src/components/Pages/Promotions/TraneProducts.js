@@ -37,6 +37,7 @@ const TraneProducts = () => {
           hspace="0"
           scrolling="auto"
           allowtransparency="true"
+          title="Trane Products List"
         />
       </div>
     </TraneProductsStyled>

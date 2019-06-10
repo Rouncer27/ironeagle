@@ -31,7 +31,7 @@ const EmployeeStyled = styled.div`
 const MainNavEmployee = () => {
   return (
     <EmployeeStyled>
-      <a href="#">Employee Access</a>
+      <a href="http://ironeagle.ca/water-cooler/">Employee Access</a>
     </EmployeeStyled>
   )
 }

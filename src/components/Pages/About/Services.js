@@ -58,7 +58,7 @@ const Services = () => {
   return (
     <ServicesStyled>
       <StandardWrapper>
-        <Link to="/about-us" className="service-item">
+        <Link to="/about/heating" className="service-item">
           <div className="service-icon">
             <Heating />
           </div>
@@ -73,7 +73,7 @@ const Services = () => {
           </div>
         </Link>
 
-        <Link to="/about-us" className="service-item">
+        <Link to="/about/air-conditioning" className="service-item">
           <div className="service-icon">
             <AirConditioning />
           </div>
@@ -89,7 +89,7 @@ const Services = () => {
           </div>
         </Link>
 
-        <Link className="service-item">
+        <Link to="/about/refrigeration" className="service-item">
           <div className="service-icon">
             <Refrigeration />
           </div>

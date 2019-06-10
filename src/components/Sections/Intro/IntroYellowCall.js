@@ -35,10 +35,17 @@ const IntroYellowCallStyled = styled.div`
   }
 `
 
-const IntroYellowCall = ({ content }) => {
+const IntroYellowCall = ({ content, location }) => {
+  let emergencyNumber = false
+  if (location !== undefined) {
+    if (location.pathname === "/contact" || location.pathname === "/contact/") {
+      emergencyNumber = true
+    }
+  }
   return (
     <IntroYellowCallStyled>
       <p dangerouslySetInnerHTML={{ __html: content }} />
+      {emergencyNumber && <p className="emergency-number">403.948.133</p>}
     </IntroYellowCallStyled>
   )
 }

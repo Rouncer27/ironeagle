@@ -51,7 +51,6 @@ const ServicesLinksStyled = styled.section`
 const ServicesLinks = ({ location }) => {
   const urlArray = location.pathname.split("/")
   const pageName = urlArray[urlArray.length - 1]
-  console.log(pageName)
   return (
     <ServicesLinksStyled>
       <StandardWrapper>

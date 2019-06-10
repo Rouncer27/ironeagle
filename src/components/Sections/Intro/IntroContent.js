@@ -24,6 +24,7 @@ const IntroContent = ({
   linkContent,
   linkURL,
   yellowContent,
+  location,
 }) => {
   return (
     <IntroContentStyled>
@@ -32,7 +33,9 @@ const IntroContent = ({
       {linkContent && linkURL && (
         <IntroLink content={linkContent} url={linkURL} />
       )}
-      {yellowContent && <IntroYellowCall content={yellowContent} />}
+      {yellowContent && (
+        <IntroYellowCall content={yellowContent} location={location} />
+      )}
     </IntroContentStyled>
   )
 }
