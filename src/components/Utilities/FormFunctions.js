@@ -45,4 +45,26 @@ const resetTheFormMain = setState => {
   })
 }
 
-export { formSentSuccess, formHasErrors, dismissError, resetTheFormMain }
+const resetTheFormBuilder = setState => {
+  setState(prevState => {
+    return {
+      ...prevState,
+      submitting: false,
+      formHasErrors: false,
+      formSent: false,
+      errors: [],
+      buildName: "",
+      buildEmail: "",
+      buildPhone: "",
+      buildDetails: "",
+    }
+  })
+}
+
+export {
+  formSentSuccess,
+  formHasErrors,
+  dismissError,
+  resetTheFormMain,
+  resetTheFormBuilder,
+}

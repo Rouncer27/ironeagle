@@ -227,7 +227,10 @@ class Form extends Component {
           </UnderlineButton>
         </form>
         {this.state.formSent && (
-          <FormSuccessModal formSetState={this.setState.bind(this)} />
+          <FormSuccessModal
+            formType="main"
+            formSetState={this.setState.bind(this)}
+          />
         )}
         {this.state.submitting && <FormSendingModal />}
         {this.state.formHasErrors && (

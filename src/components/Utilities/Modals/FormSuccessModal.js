@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import { resetTheFormMain } from "../FormFunctions"
+import { resetTheFormMain, resetTheFormBuilder } from "../FormFunctions"
 import { UnderlineButton } from "../../styles/Commons/Buttons"
 
 const FormSuccessModalStyled = styled.div`
@@ -59,13 +59,16 @@ const FormSuccessModalStyled = styled.div`
   }
 `
 
-const FormSuccessModal = ({ formSetState }) => {
+const FormSuccessModal = ({ formSetState, formType }) => {
+  const resetFunction =
+    formType === "main" ? resetTheFormMain : resetTheFormBuilder
+
   return (
-    <FormSuccessModalStyled onClick={() => resetTheFormMain(formSetState)}>
+    <FormSuccessModalStyled onClick={() => resetFunction(formSetState)}>
       <div className="form-send-modal--container">
         <p>Success! Your Form Have Been Sent.</p>
         <UnderlineButton className="form-close-btn">
-          <button onClick={() => resetTheFormMain(formSetState)}>Close</button>
+          <button onClick={() => resetFunction(formSetState)}>Close</button>
         </UnderlineButton>
       </div>
       <div className="form-send-modal--background" />
