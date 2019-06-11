@@ -61,6 +61,7 @@ class Form extends Component {
     bodyFormData.append("yourEmail", this.state.yourEmail)
     bodyFormData.append("yourPhone", this.state.yourPhone)
     bodyFormData.append("yourDetails", this.state.yourDetails)
+    bodyFormData.append("issueType", this.state.issueType)
 
     const baseURL = "https://dedi105.canspace.ca/~ironeagleswbcrea/"
     const config = { headers: { "Content-Type": "multipart/form-data" } }

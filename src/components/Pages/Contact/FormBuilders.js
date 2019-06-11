@@ -21,6 +21,23 @@ const FormStyled = styled.form`
     justify-content: center;
     width: 100%;
   }
+
+  .build-form-button {
+    button {
+      color: ${props => props.theme.black};
+
+      &::after {
+        background: ${props => props.theme.colorPrim};
+      }
+
+      &:hover {
+        color: ${props => props.theme.colorSec};
+        &::after {
+          background: ${props => props.theme.colorSec};
+        }
+      }
+    }
+  }
 `
 
 export default class FormBuilders extends Component {
@@ -38,7 +55,6 @@ export default class FormBuilders extends Component {
       buildEmail: "",
       buildPhone: "",
       buildDetails: "",
-      issueType: "",
     }
   }
 
@@ -139,7 +155,7 @@ export default class FormBuilders extends Component {
               required={false}
             />
           </FormFieldContainerFull>
-          <UnderlineButton>
+          <UnderlineButton className="build-form-button">
             <button>Submit</button>
           </UnderlineButton>
         </form>
