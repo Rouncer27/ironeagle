@@ -74,8 +74,10 @@ const InputTextArea = styled.textarea`
 `
 
 const SelectDropdown = styled.div`
+  position: relative;
   width: 100%;
   margin: 2rem 0;
+  padding-top: 1rem;
 
   @media (min-width: ${props => props.theme.bpTablet}) {
     margin: 2rem;
