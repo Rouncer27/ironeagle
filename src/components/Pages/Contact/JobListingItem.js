@@ -14,7 +14,8 @@ const JobListingItemStyled = styled.div`
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
 
   @media (min-width: ${props => props.theme.bpTablet}) {
-    width: 50%;
+    width: calc(50% - 4rem);
+    margin: 2rem;
     padding: 3rem 3rem 8rem;
   }
 
@@ -36,6 +37,10 @@ const JobListingItemStyled = styled.div`
     right: 0;
     bottom: 3rem;
     left: 0;
+
+    a {
+      padding: 1rem 1rem 0;
+    }
   }
 `
 

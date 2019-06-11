@@ -12,6 +12,14 @@ const CheckStyled = styled.section`
   position: relative;
   background: ${props => props.theme.colorPrim};
 
+  @media (min-width: ${props => props.theme.bpTablet}) {
+    margin-top: 15rem;
+  }
+
+  @media (min-width: ${props => props.theme.bpDesksm}) {
+    margin-top: 1rem;
+  }
+
   .check-title {
     position: absolute;
     top: -5rem;
@@ -22,11 +30,11 @@ const CheckStyled = styled.section`
     text-align: center;
 
     @media (min-width: ${props => props.theme.bpTablet}) {
-      top: -4.75rem;
+      top: -7rem;
     }
 
     @media (min-width: ${props => props.theme.bpDesksm}) {
-      top: -9.5rem;
+      top: -8.5rem;
     }
   }
 

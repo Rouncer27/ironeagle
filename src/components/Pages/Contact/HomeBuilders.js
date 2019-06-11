@@ -10,7 +10,6 @@ import { StandardParagraph } from "../../styles/Commons/Paragraphs"
 const HomeBuildersStyled = styled.section`
   position: relative;
   min-height: 40rem;
-  ${"" /* overflow: hidden; */}
 
   @media (min-width: ${props => props.theme.bpTablet}) {
     min-height: 50rem;
@@ -22,23 +21,31 @@ const HomeBuildersStyled = styled.section`
   }
 
   .home-wrapper {
-    padding-top: 15rem;
-  }
+    padding-top: 5rem;
 
+    @media (min-width: ${props => props.theme.bpTablet}) {
+      padding-top: 7.5rem;
+    }
+    @media (min-width: ${props => props.theme.bpDesksm}) {
+      padding-top: 15rem;
+    }
+  }
 
   .home-intro {
     width: 100%;
+    text-align: center;
 
-    @media (min-width: ${props => props.theme.bpTablet}) {
+    @media (min-width: ${props => props.theme.bpDesksm}) {
       width: calc(50% - 4rem);
       margin-right: 4rem;
+      text-align: left;
     }
   }
 
   .home-form {
     width: 100%;
 
-    @media (min-width: ${props => props.theme.bpTablet}) {
+    @media (min-width: ${props => props.theme.bpDesksm}) {
       width: calc(50% - 4rem);
       margin-left: 4rem;
     }
