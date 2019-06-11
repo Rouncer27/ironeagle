@@ -9,6 +9,7 @@ import { AngleGreyBackground } from "../../styles/Commons/Effects"
 const LocationStyled = styled.section`
   position: relative;
   width: 100%;
+
   @media (min-width: ${props => props.theme.bpTablet}) {
     margin-top: 10rem;
   }
@@ -33,13 +34,17 @@ const LocationStyled = styled.section`
 
     .location-map--title {
       position: absolute;
-      top: -3rem;
+      top: -2rem;
       right: 0;
       left: 0;
       width: 100%;
       margin: 0 auto;
       text-align: center;
       z-index: 500;
+
+      @media (min-width: ${props => props.theme.bpTablet}) {
+        top: -3rem;
+      }
 
       p {
         color: ${props => props.theme.black};
@@ -65,9 +70,14 @@ const LocationStyled = styled.section`
 
   .location-address {
     width: 100%;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    text-align: center;
 
     @media (min-width: ${props => props.theme.bpTablet}) {
       width: calc(50% - 4rem);
+      margin-top: 0;
+      margin-bottom: 0;
       margin-left: 4rem;
     }
 

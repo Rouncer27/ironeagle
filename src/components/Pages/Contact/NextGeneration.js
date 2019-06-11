@@ -27,8 +27,16 @@ const NextGenerationStyled = styled.section`
   }
 
   .next-gen-title {
-    width: calc(80% - 4rem);
-    margin-left: 4rem;
+    width: 100%;
+    margin-top: 5rem;
+    text-align: center;
+
+    @media (min-width: ${props => props.theme.bpTablet}) {
+      width: calc(80% - 4rem);
+      margin-top: 0;
+      margin-left: 4rem;
+      text-align: left;
+    }
 
     h2 {
       width: 100%;
@@ -38,9 +46,16 @@ const NextGenerationStyled = styled.section`
   }
 
   .next-gen-logo {
-    width: calc(20% - 4rem);
-    margin-right: 2rem;
-    margin-left: 2rem;
+    width: 100%;
+    max-width: 20rem;
+    margin: 0 auto;
+
+    @media (min-width: ${props => props.theme.bpTablet}) {
+      width: calc(20% - 4rem);
+      max-width: 100%;
+      margin-right: 2rem;
+      margin-left: 2rem;
+    }
   }
 
   .next-gen-angle {

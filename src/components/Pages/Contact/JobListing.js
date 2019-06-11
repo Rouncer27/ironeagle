@@ -15,7 +15,6 @@ const JobListingStyled = styled.section`
 `
 
 const JobListing = ({ jobPostings }) => {
-  console.log(jobPostings)
   return (
     <JobListingStyled>
       <FullScreenWrapper>

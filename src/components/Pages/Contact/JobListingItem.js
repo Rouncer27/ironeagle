@@ -8,6 +8,7 @@ import { UnderlineLinks } from "../../styles/Commons/Buttons"
 const JobListingItemStyled = styled.div`
   position: relative;
   width: 100%;
+  margin: 2.5rem 0;
   padding: 2rem 2rem 8rem;
   text-align: center;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);

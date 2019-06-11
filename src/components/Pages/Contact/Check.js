@@ -14,7 +14,7 @@ const CheckStyled = styled.section`
 
   .check-title {
     position: absolute;
-    top: -6rem;
+    top: -5rem;
     right: 0;
     left: 0;
     width: 100%;
@@ -50,7 +50,9 @@ const CheckStyled = styled.section`
   .check-items {
     width: 100%;
     ol {
-      columns: 2;
+      @media (min-width: ${props => props.theme.bpTablet}) {
+        columns: 2;
+      }
 
       li {
         padding-left: 2rem;
