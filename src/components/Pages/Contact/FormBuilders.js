@@ -11,7 +11,7 @@ import {
 
 import { UnderlineButton } from "../../styles/Commons/Buttons"
 
-const FormStyled = styled.form`
+const FormStyled = styled.div`
   width: 100%;
   padding: 0 0 4rem;
 

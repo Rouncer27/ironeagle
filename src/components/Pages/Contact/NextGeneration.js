@@ -39,7 +39,8 @@ const NextGenerationStyled = styled.section`
 
   .next-gen-logo {
     width: calc(20% - 4rem);
-    margin-right: 4rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
   }
 
   .next-gen-angle {
