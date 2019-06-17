@@ -72,7 +72,7 @@ exports.createPages = ({ graphql, actions }) => {
           })
         } else if (edge.node.template === "tpl-page-services.php") {
           createPage({
-            path: `/about/${edge.node.slug}`,
+            path: `/what-we-do/${edge.node.slug}`,
             component: path.resolve(`./src/templates/Services.js`),
             context: {
               id: edge.node.wordpress_id,
