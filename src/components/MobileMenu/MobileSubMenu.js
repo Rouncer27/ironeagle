@@ -51,7 +51,7 @@ const MobileSubMenu = props => {
   const [isOpen, setOpen] = useState(false)
 
   const slideNavOpen = useSpring({
-    maxHeight: isOpen ? "210px" : "0px",
+    maxHeight: isOpen ? "253px" : "0px",
     padding: isOpen ? "3rem 0rem" : "0rem 0rem",
   })
   const AnimatedMobileSubMenuStyled = animated(MobileSubMenuStyled)

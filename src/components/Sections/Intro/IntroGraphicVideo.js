@@ -5,10 +5,12 @@ import Waves from "../../Svgs/Waves"
 const IntroGraphicVideoStyled = styled.div`
   position: relative;
   width: 100%;
+  max-width: 33rem;
   margin: 0 auto;
 
   @media (min-width: ${props => props.theme.bpTablet}) {
     width: 40%;
+    padding-left: 5.5rem;
   }
 
   @media (min-width: ${props => props.theme.bpDesksm}) {

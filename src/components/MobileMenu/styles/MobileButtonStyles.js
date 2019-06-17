@@ -8,8 +8,8 @@ const MobileButton = styled.button`
   position: fixed;
   top: 0.25rem;
   left: 0.25rem;
-  width: 7.5rem;
-  height: 7.5rem;
+  width: 5.5rem;
+  height: 5.5rem;
   margin: 0 auto;
   padding: 0;
   background: ${props => props.theme.colorPrim};
