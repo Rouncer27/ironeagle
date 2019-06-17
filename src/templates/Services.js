@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Intro from "../components/Pages/Services/Intro"
 import Types from "../components/Pages/Services/Types"
+import TraneProducts from "../components/Pages/Services/TraneProducts"
 import ServicesLinks from "../components/Pages/Services/ServicesLinks"
 
 const AirConditioning = props => {
@@ -11,6 +12,7 @@ const AirConditioning = props => {
     <Layout location={props.location}>
       <SEO />
       <Intro location={props.location} />
+      <TraneProducts />
       <Types />
       <ServicesLinks location={props.location} />
     </Layout>

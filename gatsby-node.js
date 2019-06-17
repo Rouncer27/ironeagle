@@ -78,6 +78,14 @@ exports.createPages = ({ graphql, actions }) => {
               id: edge.node.wordpress_id,
             },
           })
+        } else if (edge.node.template === "tpl-page-trane.php") {
+          createPage({
+            path: `/what-we-do/${edge.node.slug}`,
+            component: path.resolve(`./src/templates/Trane.js`),
+            context: {
+              id: edge.node.wordpress_id,
+            },
+          })
         }
       })
     })

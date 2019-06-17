@@ -44,6 +44,7 @@ const MainNavItemStyled = styled.li`
     transition: all 0.3s ease;
     visibility: hidden;
     opacity: 0;
+    z-index: 999999;
   }
 
   &:hover {
