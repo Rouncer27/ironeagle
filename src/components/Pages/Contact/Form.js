@@ -77,7 +77,7 @@ class Form extends Component {
     bodyFormData.append("yourDetails", this.state.yourDetails)
     bodyFormData.append("issueType", this.state.issueType)
 
-    const baseURL = "https://dedi105.canspace.ca/~ironeagleswbcrea/database"
+    const baseURL = "https://database.ironeagle.ca"
     const config = { headers: { "Content-Type": "multipart/form-data" } }
 
     axios
