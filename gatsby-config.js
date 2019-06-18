@@ -14,7 +14,7 @@ module.exports = {
     title: `Iron Eagle - Heating & Air Conditioning`,
     description: `We Install, Maintian & Repair Furnaces, HVAC systems, & much more!`,
     author: `@gatsbyjs`,
-    siteUrl: `https://iron-eagle-airdrie.netlify.com`,
+    metaImg: `src/images/default-meta-image.jpg`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

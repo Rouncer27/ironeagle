@@ -4,19 +4,16 @@ import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 function SEO({ description, lang, meta, title, keywords }) {
-  const { site, metaImg } = useStaticQuery(
+  const { site } = useStaticQuery(
     graphql`
-      {
+      query {
         site {
           siteMetadata {
             title
             description
             author
-            siteUrl
+            metaImg
           }
-        }
-        metaImg: file(relativePath: { eq: "default-meta-image.jpg" }) {
-          publicURL
         }
       }
     `
@@ -24,8 +21,8 @@ function SEO({ description, lang, meta, title, keywords }) {
 
   const metaDescription = description || site.siteMetadata.description
   const metaKeywords = keywords !== undefined ? keywords : []
-  const image = metaImg.publicURL
-    ? `${site.siteMetadata.siteUrl}${metaImg.publicURL}`
+  const image = site.siteMetadata.metaImg
+    ? `https://iron-eagle-airdrie.netlify.com${site.siteMetadata.metaImg}`
     : null
 
   return (
