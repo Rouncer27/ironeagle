@@ -19,7 +19,23 @@ export default class Contact extends Component {
     const jobPostings = []
     return (
       <Layout location={this.props.location}>
-        <SEO title="Home" keywords={[]} />
+        <SEO
+          title="Are you ready? We are here to listen. - Iron Eagle"
+          description="Give us a call, we are happy to speak with you. We can answer your questions and provide more information on your specific heating and cooling needs."
+          keywords={[
+            "contact us",
+            "call us",
+            "questions",
+            "heating",
+            "cooling",
+            "air conditioning",
+            "refrigeration",
+            "furnaces",
+            "airdrie",
+            "furnace checklist",
+            "free quote",
+          ]}
+        />
         <Intro location={this.props.location} />
         <Location />
         <Check />

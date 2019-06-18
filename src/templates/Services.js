@@ -10,7 +10,11 @@ import ServicesLinks from "../components/Pages/Services/ServicesLinks"
 const AirConditioning = props => {
   return (
     <Layout location={props.location}>
-      <SEO keywords={[]} />
+      <SEO
+        title="Air Conditioning. Heating. Refrigeration. - Iron Eagle"
+        description="Meeting all of your air conditioning needs. Your comfort is our priority. Keeping your products at a safe temperature."
+        keywords={["air conditioning", "heating", "furnace", "refrigeration"]}
+      />
       <Intro location={props.location} />
       <TraneProducts />
       <Types />

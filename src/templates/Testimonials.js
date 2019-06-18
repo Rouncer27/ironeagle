@@ -11,7 +11,18 @@ export default class Testimonials extends Component {
     const testimonials = this.props.data.allWordpressWpTest.edges
     return (
       <Layout location={this.props.location}>
-        <SEO title="Home" keywords={[]} />
+        <SEO
+          title="We are happy when you are happy. - Iron Eagle"
+          description="We are happy when you are happy. We are a referral business, so our success depends on your satisfaction."
+          keywords={[
+            "testimonials",
+            "guaranteed",
+            "referral business",
+            "heating",
+            "cooling",
+            "free quote",
+          ]}
+        />
         <Intro />
         <TestimonialItems tests={testimonials} />
       </Layout>
