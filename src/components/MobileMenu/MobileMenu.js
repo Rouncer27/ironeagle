@@ -31,7 +31,7 @@ const NavMobileStyled = styled.div`
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
+      height: 100vh;
       transform: translateX(-100%);
       background: ${props => props.theme.colorSec};
       overflow-y: scroll;
@@ -95,8 +95,8 @@ const MobileMenu = ({ location }) => {
                       />
                     )
                   })}
+                  <MobileFooter />
                 </ul>
-                <MobileFooter />
               </animated.nav>
             </div>
           </NavMobileStyled>
