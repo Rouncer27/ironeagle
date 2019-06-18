@@ -15,6 +15,7 @@ module.exports = {
     description: `We Install, Maintian & Repair Furnaces, HVAC systems, & much more!`,
     author: `@gatsbyjs`,
     metaImg: `src/images/default-meta-image.jpg`,
+    siteUrl: `https://ironeagle.ca`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
