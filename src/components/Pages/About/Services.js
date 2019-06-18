@@ -98,8 +98,8 @@ const Services = () => {
           </div>
           <div>
             <SmallParagraphs>
-              Our work includes both household and commercial refrigeration
-              projects to ensure that your system is efficient and effective.
+              Our work includes commercial refrigeration projects to ensure that
+              your system is efficient and effective.
             </SmallParagraphs>
           </div>
         </Link>
