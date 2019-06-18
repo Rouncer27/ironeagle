@@ -20,7 +20,7 @@ export default class Contact extends Component {
     return (
       <Layout location={this.props.location}>
         <SEO
-          title="Are you ready? We are here to listen. - Iron Eagle"
+          title="Are you ready? We are here to listen"
           description="Give us a call, we are happy to speak with you. We can answer your questions and provide more information on your specific heating and cooling needs."
           keywords={[
             "contact us",

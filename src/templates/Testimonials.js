@@ -12,7 +12,7 @@ export default class Testimonials extends Component {
     return (
       <Layout location={this.props.location}>
         <SEO
-          title="We are happy when you are happy. - Iron Eagle"
+          title="We are happy when you are happy."
           description="We are happy when you are happy. We are a referral business, so our success depends on your satisfaction."
           keywords={[
             "testimonials",

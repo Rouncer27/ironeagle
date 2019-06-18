@@ -21,7 +21,7 @@ class WhatWeDo extends Component {
     return (
       <Layout location={this.props.location}>
         <SEO
-          title="Furnaces, Air Conditioning, Refrigeration, HVAC & More - Iron Eagle"
+          title="Heating, Air Conditioning, Refrigeration, HVAC"
           description="Furnaces, Air Conditioning, Refrigeration, HVAC & More. We ensure that your household system exceeds your expectation."
           keywords={[
             "quality work",

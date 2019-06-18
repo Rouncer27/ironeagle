@@ -9,7 +9,7 @@ export default class Promotions extends Component {
     return (
       <Layout location={this.props.location}>
         <SEO
-          title="Our latest promotions and specialty offers. - Iron Eagle"
+          title="Our latest promotions and specialty offers"
           description="Iron Eagle has continued to provide customers with quality work and fair prices on repairs, new furnaces, air conditioners, HVAC systems, and refrigeration of all types."
           keywords={[
             "promotions",
