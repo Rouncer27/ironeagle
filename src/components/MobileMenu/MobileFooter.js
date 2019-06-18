@@ -23,7 +23,7 @@ const MobileFooterStyled = styled.div`
 const MobileFooter = () => {
   return (
     <MobileFooterStyled>
-      <a href="http://ironeagle.ca/water-cooler/">Employee Access</a>
+      <a href="http://employees.ironeagle.ca/water-cooler/">Employee Access</a>
     </MobileFooterStyled>
   )
 }

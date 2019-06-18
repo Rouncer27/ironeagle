@@ -2,10 +2,10 @@ let BASE_URL = ""
 let PORTOCOL = ""
 
 if (process.env.NODE_ENV === "development") {
-  BASE_URL = "localhost/ironeagle"
+  BASE_URL = "database.ironeagle.ca"
   PORTOCOL = "http"
 } else {
-  BASE_URL = "dedi105.canspace.ca/~ironeagleswbcrea/database"
+  BASE_URL = "database.ironeagle.ca"
   PORTOCOL = "http"
 }
 
