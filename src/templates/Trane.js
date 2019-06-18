@@ -7,7 +7,7 @@ import TraneProducts from "../components/Pages/Trane/TraneProducts"
 const Trane = props => {
   return (
     <Layout location={props.location}>
-      <SEO />
+      <SEO keywords={[]} />
       <TraneProducts />
     </Layout>
   )

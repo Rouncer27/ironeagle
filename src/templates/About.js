@@ -12,7 +12,24 @@ export default class About extends Component {
   render() {
     return (
       <Layout location={this.props.location}>
-        <SEO title="About Page" />
+        <SEO
+          title="You Can Rely On Us - Iron Eagle"
+          description="Iron Eagle employs over 30 people, both journeymen and apprentices. Based in Airdrie, we also work in the surrounding communities of Calgary and High River."
+          keywords={[
+            "dedicated",
+            "emergency repair",
+            "passion",
+            "heating",
+            "air conditioning",
+            "refrigeration",
+            "peace of mind",
+            "southern alberta",
+            "airdrie",
+            "calgary",
+            "high river",
+            "free quote",
+          ]}
+        />
         <Intro />
         <Services />
         <Peace />

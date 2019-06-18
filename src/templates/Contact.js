@@ -19,7 +19,7 @@ export default class Contact extends Component {
     const jobPostings = []
     return (
       <Layout location={this.props.location}>
-        <SEO title="Home" />
+        <SEO title="Home" keywords={[]} />
         <Intro location={this.props.location} />
         <Location />
         <Check />

@@ -8,7 +8,7 @@ export default class Promotions extends Component {
   render() {
     return (
       <Layout location={this.props.location}>
-        <SEO title="Home" />
+        <SEO title="Home" keywords={[]} />
         <Intro />
         <CurrentPromotions />
       </Layout>

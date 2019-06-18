@@ -10,7 +10,7 @@ import ServicesLinks from "../components/Pages/Services/ServicesLinks"
 const AirConditioning = props => {
   return (
     <Layout location={props.location}>
-      <SEO />
+      <SEO keywords={[]} />
       <Intro location={props.location} />
       <TraneProducts />
       <Types />

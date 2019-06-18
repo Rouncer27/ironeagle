@@ -20,7 +20,40 @@ class WhatWeDo extends Component {
 
     return (
       <Layout location={this.props.location}>
-        <SEO title="Home" />
+        <SEO
+          title="Furnaces, Air Conditioning, Refrigeration, HVAC & More - Iron Eagle"
+          description="Furnaces, Air Conditioning, Refrigeration, HVAC & More. We ensure that your household system exceeds your expectation."
+          keywords={[
+            "quality work",
+            "fair prices",
+            "heating",
+            "cooling",
+            "household systems",
+            "emergency repair",
+            "new home builds",
+            "furnaces",
+            "refrigeration",
+            "HVAC",
+            "renovations",
+            "air conditioning",
+            "commercial projects",
+            "installation",
+            "repair",
+            "maintenance",
+            "free quote",
+            "home owners",
+            "contractors",
+            "airdrie",
+            "calgary",
+            "high river",
+            "crossfield",
+            "carstairs",
+            "drumheller",
+            "sundre",
+            "didsbury",
+            "trane",
+          ]}
+        />
         <Intro />
         <Services />
         <Areas location={this.props.location} />
