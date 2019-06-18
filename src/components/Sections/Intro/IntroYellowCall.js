@@ -20,9 +20,11 @@ const IntroYellowCallStyled = styled.div`
     font-family: ${props => props.theme.fontSec};
     font-weight: bold;
     margin: 0;
+    padding-left: 45rem;
     font-size: 1.8rem;
 
     @media (min-width: ${props => props.theme.bpTablet}) {
+      padding-left: 0;
       font-size: 2rem;
     }
 
