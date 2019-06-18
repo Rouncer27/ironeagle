@@ -27,6 +27,7 @@ const IntroContent = ({
   linkURL,
   yellowContent,
   location,
+  isHome,
 }) => {
   let notWorking = false
   if (location !== undefined) {
@@ -34,9 +35,12 @@ const IntroContent = ({
       notWorking = true
     }
   }
+
+  const isHomePage = isHome ? true : false
+
   return (
     <IntroContentStyled>
-      {title && <IntroTitle content={title} />}
+      {title && <IntroTitle content={title} isHomePage={isHomePage} />}
       {paraContent && <IntroParagraph content={paraContent} />}
       {linkContent && linkURL && (
         <IntroLink content={linkContent} url={linkURL} />

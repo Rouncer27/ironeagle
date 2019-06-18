@@ -18,6 +18,7 @@ const Intro = () => {
       <StandardWrapper>
         <IntroContent
           title={title}
+          isHome={true}
           paraContent={paraContent}
           linkContent={linkContent}
           linkURL={linkURL}

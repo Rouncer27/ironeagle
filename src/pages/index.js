@@ -12,7 +12,7 @@ import Referral from "../components/Pages/Home/Referral"
 const IndexPage = props => (
   <Layout location={props.location}>
     <SEO
-      title="Iron Eagle - Heating, Furnace, Air Conditioning, HVAC and Refrigeration"
+      title="Heating, Furnace, Air Conditioning, HVAC and Refrigeration"
       description="Iron Eagle, quality work and fair prices on repairs, new furnaces, air conditioners, HVAC systems, and refrigeration of all types."
       keywords={[
         "heating",

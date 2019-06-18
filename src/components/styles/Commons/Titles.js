@@ -1,5 +1,25 @@
 import styled from "styled-components"
 
+const BigH1Title = styled.h1`
+  color: ${props => props.theme.black};
+  font-family: ${props => props.theme.fontSec};
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 1.14;
+
+  @media (min-width: ${props => props.theme.bpTablet}) {
+    font-size: 3.6rem;
+  }
+
+  @media (min-width: ${props => props.theme.bpDesksm}) {
+    font-size: 4.6rem;
+  }
+
+  @media (min-width: ${props => props.theme.bpDeskmd}) {
+    font-size: 5.2rem;
+  }
+`
+
 const SmallerH1TitleBlue = styled.h1`
   color: ${props => props.theme.colorPrim};
   font-family: ${props => props.theme.fontSec};
@@ -180,6 +200,7 @@ const SmallH3Title = styled.h3`
 `
 
 export {
+  BigH1Title,
   SmallH1TitleBlue,
   SmallerH1TitleBlue,
   TinyH2Title,
