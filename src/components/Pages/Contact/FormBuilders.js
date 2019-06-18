@@ -86,7 +86,7 @@ export default class FormBuilders extends Component {
     bodyFormData.append("buildPhone", this.state.buildPhone)
     bodyFormData.append("buildDetails", this.state.buildDetails)
 
-    const baseURL = "https://dedi105.canspace.ca/~ironeagleswbcrea/database"
+    const baseURL = "https://database.ironeagle.ca"
     const config = { headers: { "Content-Type": "multipart/form-data" } }
 
     axios
