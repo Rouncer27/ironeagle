@@ -130,7 +130,7 @@ const Intro = ({ location }) => {
     subTitle = "Refrigeration"
     mainTitle = "Keeping your products at a safe temperature."
     mainContent =
-      "<p>Our work includes both household and commercial refrigeration projects. Our technicians ensure that your refrigeration system is working efficiently to keep everything from groceries to restaurant storage cool and at a safe temperature.</p><p>We install, repair, and maintain your household cooling systems including refrigerators, reach-in coolers, and freezers. We also install and maintain commercial walk-in refrigerators and freezers.</p><p>If you have any questions, give us a call to book a free quote and to discuss projects or products with our technicians.</p>"
+      "<p>Our work includes commercial refrigeration projects. Our technicians ensure that your refrigeration system is working efficiently to keep everything from groceries to restaurant storage cool and at a safe temperature.</p><p>We install, repair, and maintain your commercial cooling systems including refrigerators, reach-in coolers, and freezers. We also install and maintain commercial walk-in refrigerators and freezers.</p><p>If you have any questions, give us a call to book a free quote and to discuss projects or products with our technicians.</p>"
     Icon = Cubes
   }
 

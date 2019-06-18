@@ -69,7 +69,7 @@ const ServicesLinks = ({ location }) => {
               </SmallParagraphs>
             </div>
             <UnderlineLinks>
-              <Link to="/about/heating">Learn More</Link>
+              <Link to="/what-we-do/heating">Learn More</Link>
             </UnderlineLinks>
           </div>
         )}
@@ -90,7 +90,7 @@ const ServicesLinks = ({ location }) => {
               </SmallParagraphs>
             </div>
             <UnderlineLinks>
-              <Link to="/about/air-conditioning">Learn More</Link>
+              <Link to="/what-we-do/air-conditioning">Learn More</Link>
             </UnderlineLinks>
           </div>
         )}
@@ -105,12 +105,12 @@ const ServicesLinks = ({ location }) => {
             </div>
             <div>
               <SmallParagraphs>
-                Our work includes both household and commercial refrigeration
-                projects to ensure that your system is efficient and effective.
+                Our work includes commercial refrigeration projects to ensure
+                that your system is efficient and effective.
               </SmallParagraphs>
             </div>
             <UnderlineLinks>
-              <Link to="/about/refrigeration">Learn More</Link>
+              <Link to="/what-we-do/refrigeration">Learn More</Link>
             </UnderlineLinks>
           </div>
         )}

@@ -15,7 +15,7 @@ const Refrigeration = () => {
       </div>
       <div className="icon-content">
         <SmallParagraphs>
-          We install, repair, and maintain your household cooling systems
+          We install, repair, and maintain your commercial cooling systems
           including refrigerators, reach-in coolers, and freezers. We also
           install and maintain commercial walk-in refrigerators.
         </SmallParagraphs>

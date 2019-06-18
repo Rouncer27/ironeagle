@@ -11,10 +11,12 @@ import JobListing from "../components/Pages/Contact/JobListing"
 
 export default class Contact extends Component {
   render() {
-    const jobPostings =
-      this.props.data.allWordpressWpJobPosting.edges.length > 0
-        ? this.props.data.allWordpressWpJobPosting.edges
-        : []
+    // const jobPostings =
+    //   this.props.data.allWordpressWpJobPosting.edges.length > 0
+    //     ? this.props.data.allWordpressWpJobPosting.edges
+    //     : []
+
+    const jobPostings = []
     return (
       <Layout location={this.props.location}>
         <SEO title="Home" />
@@ -29,19 +31,19 @@ export default class Contact extends Component {
   }
 }
 
-export const query = graphql`
-  query jobPosting {
-    allWordpressWpJobPosting {
-      edges {
-        node {
-          acf {
-            _ire_job_posting_title
-            _ire_job_posting_location
-            _ire_job_posting_details
-            _ire_job_posting_link
-          }
-        }
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   query jobPosting {
+//     allWordpressWpJobPosting {
+//       edges {
+//         node {
+//           acf {
+//             _ire_job_posting_title
+//             _ire_job_posting_location
+//             _ire_job_posting_details
+//             _ire_job_posting_link
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
