@@ -4,6 +4,7 @@ import styled from "styled-components"
 import { TinyH2Title } from "../styles/Commons/Titles"
 import CorLogo from "../Logos/CorLogo"
 import SmcaaLogo from "../Logos/SmcaaLogo"
+import SFBStyled from "../styles/Commons/SocialFollowBtn"
 
 const StyledFooterCert = styled.div`
   width: 100%;
@@ -96,6 +97,7 @@ const FooterCert = () => {
         <CorLogo />
         <SmcaaLogo />
       </div>
+      <SFBStyled />
       <div className="footer-copy">
         <p>
           Copyright © {new Date().getFullYear()} Iron Eagle. Made in Airdrie.
