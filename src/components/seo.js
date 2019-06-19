@@ -40,9 +40,6 @@ function SEO({ description, lang, meta, title, keywords }) {
     ? `${site.siteMetadata.siteUrl}/${defaultFb.publicURL}`
     : null
 
-  console.log(siteLogoUrl)
-  console.log(image)
-
   return (
     <React.Fragment>
       <Helmet
@@ -83,6 +80,11 @@ function SEO({ description, lang, meta, title, keywords }) {
           {
             property: "og:image",
             content: image,
+          },
+          {
+            property: "og:image:alt",
+            content:
+              "Iron Eagle - Heating & Air Conditioning. We Install, Maintain + Repair Furnaces, HVAC systems, & much more!",
           },
           {
             name: `twitter:card`,
