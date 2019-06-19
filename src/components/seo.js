@@ -95,6 +95,10 @@ function SEO({ description, lang, meta, title, keywords }) {
             content: site.siteMetadata.author,
           },
           {
+            name: `twitter:image`,
+            content: image,
+          },
+          {
             name: `twitter:title`,
             content: title,
           },
