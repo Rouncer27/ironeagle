@@ -75,13 +75,15 @@ const IntroNotWorkingStyled = styled.div`
 const IntroNotWorking = () => {
   return (
     <IntroNotWorkingStyled>
-      <div onClick={() => console.log("Hello")} className="not-working-content">
-        <p>
-          Furnace not working?
-          <br /> Before you call us try these <br />
-          steps to fix it yourself.
-        </p>
-      </div>
+      <a href="#checklist">
+        <div className="not-working-content">
+          <p>
+            Furnace not working?
+            <br /> Before you call us try these <br />
+            steps to fix it yourself.
+          </p>
+        </div>
+      </a>
     </IntroNotWorkingStyled>
   )
 }

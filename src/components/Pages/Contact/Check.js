@@ -87,7 +87,7 @@ const CheckStyled = styled.section`
 
 const Check = () => {
   return (
-    <CheckStyled>
+    <CheckStyled id="checklist">
       <StandardWrapper>
         <div className="check-title">
           <SmallH2Title>
