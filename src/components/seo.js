@@ -32,12 +32,12 @@ function SEO({ description, lang, meta, title, keywords }) {
     `
   )
 
-  const siteLogoUrl = `${site.siteMetadata.siteUrl}/${siteLogo.publicURL}`
+  const siteLogoUrl = `${site.siteMetadata.siteUrl}${siteLogo.publicURL}`
 
   const metaDescription = description || site.siteMetadata.description
   const metaKeywords = keywords !== undefined ? keywords : []
   const image = site.siteMetadata.metaImg
-    ? `${site.siteMetadata.siteUrl}/${defaultFb.publicURL}`
+    ? `${site.siteMetadata.siteUrl}${defaultFb.publicURL}`
     : null
 
   console.log(siteLogoUrl)
