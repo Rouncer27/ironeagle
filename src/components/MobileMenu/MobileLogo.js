@@ -4,9 +4,9 @@ import MainLogo from "../MainLogo/MainLogo"
 
 const MobileLogoStyled = styled.div`
   width: 100%;
-  max-width: 32.5rem;
-  margin: 2.5rem auto;
-  padding: 2rem;
+  max-width: 12.5rem;
+  margin: 1rem auto;
+  padding: 1rem;
 `
 
 const MobileLogo = () => {

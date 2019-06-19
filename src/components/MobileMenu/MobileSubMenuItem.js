@@ -3,6 +3,8 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 
 const MobileSubMenuItemStyled = styled.li`
+  font-size: 1.6rem;
+
   a.sub-menu-item-link {
     border: none;
     border-bottom: solid 0.1rem ${props => props.theme.colorTert};

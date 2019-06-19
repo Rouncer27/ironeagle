@@ -8,7 +8,7 @@ const MobileItemStyled = styled.li`
   position: relative;
   width: 100%;
   align-self: center;
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   text-align: center;
   overflow: hidden;
 

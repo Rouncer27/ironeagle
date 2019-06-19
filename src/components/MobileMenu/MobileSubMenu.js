@@ -15,8 +15,8 @@ const MobileSubMenuStyled = styled.ul`
     top: 0;
     bottom: 0.3rem;
     right: 1.5rem;
-    width: 5.5rem;
-    max-height: 5.55rem;
+    width: 5rem;
+    max-height: 5rem;
     transition: all 0.3s ease;
     background: ${props => props.theme.white};
     border: solid 0.2rem ${props => props.theme.black};
