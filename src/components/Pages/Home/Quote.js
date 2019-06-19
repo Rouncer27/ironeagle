@@ -92,7 +92,7 @@ const Quote = () => {
           </StandardParagraph>
         </div>
         <UnderlineLinks className="quote-link">
-          <Link to="/contact">Free Quote</Link>
+          <Link to="/contact/#contact-form">Free Quote</Link>
         </UnderlineLinks>
         <div className="quote-logo">
           <LocallyOwned />

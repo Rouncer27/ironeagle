@@ -127,7 +127,7 @@ class Form extends Component {
       }
     })
     return (
-      <FormStyled>
+      <FormStyled id="contact-form">
         <form onSubmit={this.submitTheForm} className="form-contact">
           <SelectDropdown>
             <FormLabels htmlFor="issueType">Select an issue</FormLabels>

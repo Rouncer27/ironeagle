@@ -37,7 +37,7 @@ const JobListing = ({ jobPostings }) => {
   }
 
   return (
-    <JobListingStyled>
+    <JobListingStyled id="careers">
       <FullScreenWrapper>
         <div>
           <SmallH2Title>Listing For Job Opportunities</SmallH2Title>

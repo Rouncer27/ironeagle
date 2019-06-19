@@ -44,7 +44,7 @@ const FooterQuote = () => {
         </SmallParagraphs>
       </div>
       <UnderlineLinks className="quote-link">
-        <Link to="/">Free Quote</Link>
+        <Link to="/contact/#contact-form">Free Quote</Link>
       </UnderlineLinks>
     </StyledFooterQuote>
   )

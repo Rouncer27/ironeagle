@@ -106,7 +106,7 @@ const FooterAddress = () => {
         </span>
       </address>
       <UnderlineLinks className="career-link">
-        <Link to="/contact">Careers</Link>
+        <Link to="/contact/#careers">Careers</Link>
       </UnderlineLinks>
     </StyledFooterAddress>
   )
