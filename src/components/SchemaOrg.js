@@ -17,7 +17,7 @@ export default React.memo(
     const baseSchema = [
       {
         "@context": "http://schema.org",
-        "@type": "HomeAndConstructionBusiness",
+        "@type": "HVACBusiness",
         url: "https://ironeagle.ca",
         name: "Iron Eagle Heating & Air Conditioning",
         alternateName: "Iron Eagle",
