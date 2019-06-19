@@ -5,26 +5,43 @@ import { useStaticQuery, graphql } from "gatsby"
 import SchemaOrg from "./SchemaOrg"
 
 function SEO({ description, lang, meta, title, keywords }) {
-  const { site } = useStaticQuery(
+  const { site, siteLogo, defaultFb } = useStaticQuery(
     graphql`
-      query {
+      {
         site {
           siteMetadata {
             title
             description
             author
+            siteLogo
             metaImg
+            siteUrl
           }
+        }
+
+        siteLogo: file(
+          relativePath: { eq: "iron-eagle-heating-air-conditioning.png" }
+        ) {
+          publicURL
+        }
+
+        defaultFb: file(relativePath: { eq: "default-meta-image.jpg" }) {
+          publicURL
         }
       }
     `
   )
 
+  const siteLogoUrl = `${site.siteMetadata.siteUrl}/${siteLogo.publicURL}`
+
   const metaDescription = description || site.siteMetadata.description
   const metaKeywords = keywords !== undefined ? keywords : []
   const image = site.siteMetadata.metaImg
-    ? `https://iron-eagle-airdrie.netlify.com/${site.siteMetadata.metaImg}`
+    ? `${site.siteMetadata.siteUrl}/${defaultFb.publicURL}`
     : null
+
+  console.log(siteLogoUrl)
+  console.log(image)
 
   return (
     <React.Fragment>
@@ -102,7 +119,7 @@ function SEO({ description, lang, meta, title, keywords }) {
         isBlogPost={false}
         url={site.siteMetadata.siteUrl}
         title={title}
-        image={image}
+        image={siteLogoUrl}
         description={description}
         datePublished="June 14, 2019"
         canonicalUrl="https://ironeagle.ca/"

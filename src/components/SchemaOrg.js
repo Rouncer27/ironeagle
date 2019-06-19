@@ -20,7 +20,8 @@ export default React.memo(
         "@type": "HVACBusiness",
         url: "https://ironeagle.ca",
         name: "Iron Eagle Heating & Air Conditioning",
-        alternateName: "Iron Eagle",
+        image: image,
+        alternateName: "Iron Eagle Heating & Air Conditioning",
         telephone: "403-948-1333",
         address: {
           "@type": "PostalAddress",
