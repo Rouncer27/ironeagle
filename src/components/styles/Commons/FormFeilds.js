@@ -100,7 +100,7 @@ const SelectDropdown = styled.div`
     overflow: hidden;
     width: 240px;
     border-radius: 0;
-    background-color: ${props => props.theme.colorTert};
+    background-color: ${props => props.theme.colorSec};
   }
 
   select {
@@ -110,7 +110,7 @@ const SelectDropdown = styled.div`
     height: 29px;
     padding: 5px;
     width: 268px;
-    color: #fff;
+    color: #000 !important;
   }
 `
 
