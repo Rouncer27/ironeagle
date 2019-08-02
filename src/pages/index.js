@@ -8,6 +8,7 @@ import Specialties from "../components/Pages/Home/Specialties"
 import Quality from "../components/Pages/Home/Quality"
 import Areas from "../components/Sections/Areas"
 import Referral from "../components/Pages/Home/Referral"
+import TraneSupplier from "../components/Pages/Home/TraneSupplier"
 
 const IndexPage = props => (
   <Layout location={props.location}>
@@ -36,6 +37,7 @@ const IndexPage = props => (
     <Specialties />
     <Quality />
     <Areas location={props.location} />
+    <TraneSupplier />
     <Referral />
   </Layout>
 )
