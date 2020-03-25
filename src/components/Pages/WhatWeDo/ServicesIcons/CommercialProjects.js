@@ -17,7 +17,7 @@ const CommercialProjects = () => {
         <SmallParagraphs>
           We work on new commercial projects including hotels, apartment
           buildings, commercial bays, restaurants, and office buildings. We also
-          so tenant improvements.
+          do tenant improvements.
         </SmallParagraphs>
       </div>
     </div>

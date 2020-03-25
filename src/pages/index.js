@@ -10,6 +10,8 @@ import Areas from "../components/Sections/Areas"
 import Referral from "../components/Pages/Home/Referral"
 import TraneSupplier from "../components/Pages/Home/TraneSupplier"
 
+import Popup from "../components/Popup"
+
 const IndexPage = props => (
   <Layout location={props.location}>
     <SEO
@@ -32,6 +34,7 @@ const IndexPage = props => (
         "commercial projects",
       ]}
     />
+    <Popup />
     <Intro />
     <Quote />
     <Specialties />
