@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 
 const SnapHomeDiv = styled.div`
@@ -13,16 +13,16 @@ const SnapHomeDiv = styled.div`
 `
 
 const SnapHome = () => {
+  useEffect(() => {
+    const d = document,
+      s = d.createElement("script")
+    s.src =
+      "https://forms.snapfinancial.com/weblink/embed.ashx?id=6E93E652C6A4A743E80692FA116F12E452F75D75C5A1FF4ED5891E84896C2774&s=rectangle"
+    ;(d.head || d.body).appendChild(s)
+  }, [])
   return (
     <SnapHomeDiv>
       <div id="weblink_embed_container" />
-      {(function() {
-        const d = document,
-          s = d.createElement("script")
-        s.src =
-          "https://forms.snapfinancial.com/weblink/embed.ashx?id=6E93E652C6A4A743E80692FA116F12E452F75D75C5A1FF4ED5891E84896C2774&s=rectangle"
-        ;(d.head || d.body).appendChild(s)
-      })()}
     </SnapHomeDiv>
   )
 }
