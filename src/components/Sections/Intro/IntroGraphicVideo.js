@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Waves from "../../Svgs/Waves"
+import SnapHome from "./SnapHome"
 
 const IntroGraphicVideoStyled = styled.div`
   position: relative;
@@ -85,6 +86,7 @@ const IntroGraphicVideoStyled = styled.div`
 const IntroGraphicVideo = ({ video }) => {
   return (
     <IntroGraphicVideoStyled>
+      <SnapHome />
       <div className="video-background">
         <div className="waves">
           <Waves />
