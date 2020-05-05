@@ -2,10 +2,12 @@ import React from "react"
 import styled from "styled-components"
 
 import { StandardWrapper } from "../../styles/Commons/Wrappers"
+import PromoImageTwo from "../../Utilities/Images/PromoImageTwo"
 
 const CurrentPromotionsStyled = styled.section`
-  h2 {
-    text-align: center;
+  .imageWrap {
+    position: relative;
+    width: 100%;
   }
 `
 
@@ -13,10 +15,9 @@ const CurrentPromotions = () => {
   return (
     <CurrentPromotionsStyled>
       <StandardWrapper>
-        <h2>
-          There are no current promotions.
-          <br /> Please check back again soon!
-        </h2>
+        <div className="imageWrap">
+          <PromoImageTwo />
+        </div>
       </StandardWrapper>
     </CurrentPromotionsStyled>
   )

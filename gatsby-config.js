@@ -75,6 +75,14 @@ module.exports = {
         hostingWPCOM: false,
         // does your site use the Advanced Custom Fields Plugin?
         useACF: true,
+        includedRoutes: [
+          "**/media",
+          "**/pages",
+          "**/wp-api-menus/v2",
+          "**/wp-api-menus/v2/menus",
+          "**/test",
+          "**/job_posting",
+        ],
       },
     },
     {
