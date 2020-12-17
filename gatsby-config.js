@@ -69,6 +69,7 @@ module.exports = {
       resolve: `gatsby-source-wordpress`,
       options: {
         // your wordpress source
+        minimizeDeprecationNotice: true,
         baseUrl: `${BASE_URL}`,
         protocol: `${PORTOCOL}`,
         // is it hosted on wordpress.com, or self-hosted?

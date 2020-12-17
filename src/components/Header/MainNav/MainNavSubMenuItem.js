@@ -38,9 +38,10 @@ const MainNavSubMenuItem = ({
     `${currentPageSlug}/${objectSlug}/` === location
       ? true
       : false
+
   return (
     <MainNavSubMenuItemStyled isCurrentSub={isCurrentSub}>
-      <Link className="sub-menu-link" to={`/${currentPageSlug}/${objectSlug}`}>
+      <Link className="sub-menu-link" to={`${currentPageSlug}/${objectSlug}`}>
         {title}
       </Link>
     </MainNavSubMenuItemStyled>
