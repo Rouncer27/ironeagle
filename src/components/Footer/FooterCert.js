@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import styled from "styled-components"
 
 import { TinyH2Title } from "../styles/Commons/Titles"
@@ -105,6 +106,11 @@ const FooterCert = () => {
           <a href="https://switchbackcreative.ca/">Switchback Creative Inc.</a>{" "}
           Built with ♡ and
           <a href="https://www.gatsbyjs.org"> Gatsby.</a>
+        </p>
+        <p>
+          <Link to="/privacy-policy">Privacy Policy</Link>
+          {" | "}
+          <Link to="/disclaimer">Disclaimer</Link>
         </p>
       </div>
     </StyledFooterCert>
