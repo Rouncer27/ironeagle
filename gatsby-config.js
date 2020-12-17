@@ -96,7 +96,7 @@ module.exports = {
             "X-Frame-Options: sameorigin",
             "X-XSS-Protection: 1; mode=block",
             "X-Content-Type-Options: nosniff",
-            "Permissions-Policy: geolocation=(self 'https://ironeagle.ca'), microphone=()",
+            "Permissions-Policy: geolocation=(), microphone=()",
             "Referrer-Policy: strict-origin-when-cross-origin",
             "Content-Security-Policy: upgrade-insecure-requests",
           ],
