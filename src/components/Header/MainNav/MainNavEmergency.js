@@ -32,7 +32,7 @@ const MainNavEmergency = () => {
   return (
     <EmergencyStyled>
       <p>
-        <span>24/7</span> Emergency Service{" "}
+        <span>Call</span> us for a quote{" "}
         <a href="tel:+14039481333">403.948.1333</a>
       </p>
     </EmergencyStyled>

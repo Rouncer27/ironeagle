@@ -10,7 +10,8 @@ const Intro = props => {
   const title = "Are you ready? We are here to listen."
   const paraContent =
     "Give us a call, we are happy to speak with you. We can answer your questions and provide more information on your specific heating and cooling needs."
-  const yellowContent = "Guaranteed <span>24/7 Emergency</span> repair!"
+  const yellowContent =
+    "Call <span>us for a quote</span> <a href='tel:+14039481333'>403.948.1333</a>"
   return (
     <section>
       <StandardWrapper>
@@ -18,7 +19,6 @@ const Intro = props => {
           title={title}
           paraContent={paraContent}
           yellowContent={yellowContent}
-          location={location}
         />
         <IntroGraphicVideo video={backgroundVideo} />
       </StandardWrapper>

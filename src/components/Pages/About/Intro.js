@@ -9,7 +9,8 @@ const Intro = () => {
   const title = "You can rely on us. We are dedicated."
   const paraContent =
     "Our name is Iron Eagle. “Iron” represents the physical metal product and “Eagle” symbolizes strength. Together, they represent our passion."
-  const yellowContent = "Guaranteed <span>24/7 Emergency</span> repair!"
+  const yellowContent =
+    "Call <span>us for a quote</span> <a href='tel:+14039481333'>403.948.1333</a>"
   return (
     <section>
       <StandardWrapper>

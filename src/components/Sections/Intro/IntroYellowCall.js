@@ -35,6 +35,15 @@ const IntroYellowCallStyled = styled.div`
     span {
       color: ${props => props.theme.colorPrim};
     }
+
+    a {
+      color: #000;
+      font-weight: bold;
+
+      &:hover {
+        color: ${props => props.theme.colorSec};
+      }
+    }
   }
 
   p.emergency-number {

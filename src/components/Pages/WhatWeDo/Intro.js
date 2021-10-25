@@ -9,7 +9,8 @@ const Intro = () => {
   const title = "We ensure that your household system exceeds your expectation."
   const paraContent =
     "Iron Eagle has continued to provide customers with quality work and fair prices on all types of heating and cooling projects."
-  const yellowContent = "Guaranteed <span>24/7 Emergency</span> repair!"
+  const yellowContent =
+    "Call <span>us for a quote</span> <a href='tel:+14039481333'>403.948.1333</a>"
   return (
     <section>
       <StandardWrapper>
