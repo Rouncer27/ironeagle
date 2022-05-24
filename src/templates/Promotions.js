@@ -31,7 +31,6 @@ export default class Promotions extends Component {
           ]}
         />
         <Intro />
-        <CurrentPromotions />
       </Layout>
     )
   }

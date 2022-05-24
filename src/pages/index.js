@@ -34,7 +34,6 @@ const IndexPage = props => (
         "commercial projects",
       ]}
     />
-    <Popup />
     <Intro />
     <Quote />
     <Specialties />

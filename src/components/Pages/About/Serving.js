@@ -55,7 +55,7 @@ const Serving = () => {
         </div>
         <SmallContainer>
           <StandardParagraph>
-            Iron Eagle employs over 30 people, both journeymen and apprentices.
+            Iron Eagle employs over 20 people, both journeymen and apprentices.
             Based in Airdrie, we also work in the surrounding communities of
             Calgary and High River.
           </StandardParagraph>
