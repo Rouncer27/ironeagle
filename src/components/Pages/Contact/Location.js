@@ -1,20 +1,20 @@
-import React, { Component } from "react"
-import GoogleMapReact from "google-map-react"
-import styled from "styled-components"
+import React, { Component } from "react";
+import GoogleMapReact from "google-map-react";
+import styled from "styled-components";
 
-import { StandardWrapper } from "../../styles/Commons/Wrappers"
-import { SmallH1TitleBlue } from "../../styles/Commons/Titles"
-import { AngleGreyBackground } from "../../styles/Commons/Effects"
+import { StandardWrapper } from "../../styles/Commons/Wrappers";
+import { SmallH1TitleBlue } from "../../styles/Commons/Titles";
+import { AngleGreyBackground } from "../../styles/Commons/Effects";
 
 const LocationStyled = styled.section`
   position: relative;
   width: 100%;
 
-  @media (min-width: ${props => props.theme.bpTablet}) {
+  @media (min-width: ${(props) => props.theme.bpTablet}) {
     margin-top: 10rem;
   }
 
-  @media (min-width: ${props => props.theme.bpDesksm}) {
+  @media (min-width: ${(props) => props.theme.bpDesksm}) {
     margin-top: 15rem;
     margin-bottom: 15rem;
   }
@@ -27,7 +27,7 @@ const LocationStyled = styled.section`
     position: relative;
     width: 100%;
 
-    @media (min-width: ${props => props.theme.bpTablet}) {
+    @media (min-width: ${(props) => props.theme.bpTablet}) {
       width: calc(50% - 4rem);
       margin-right: 4rem;
     }
@@ -42,26 +42,26 @@ const LocationStyled = styled.section`
       text-align: center;
       z-index: 500;
 
-      @media (min-width: ${props => props.theme.bpTablet}) {
+      @media (min-width: ${(props) => props.theme.bpTablet}) {
         top: -3rem;
       }
 
       p {
-        color: ${props => props.theme.black};
-        font-family: ${props => props.theme.fontSec};
+        color: ${(props) => props.theme.black};
+        font-family: ${(props) => props.theme.fontSec};
         font-weight: 700;
         font-size: 2.8rem;
         line-height: 1.14;
 
-        @media (min-width: ${props => props.theme.bpTablet}) {
+        @media (min-width: ${(props) => props.theme.bpTablet}) {
           font-size: 3.6rem;
         }
 
-        @media (min-width: ${props => props.theme.bpDesksm}) {
+        @media (min-width: ${(props) => props.theme.bpDesksm}) {
           font-size: 4.4rem;
         }
 
-        @media (min-width: ${props => props.theme.bpDeskmd}) {
+        @media (min-width: ${(props) => props.theme.bpDeskmd}) {
           font-size: 4.8rem;
         }
       }
@@ -74,7 +74,7 @@ const LocationStyled = styled.section`
     margin-bottom: 5rem;
     text-align: center;
 
-    @media (min-width: ${props => props.theme.bpTablet}) {
+    @media (min-width: ${(props) => props.theme.bpTablet}) {
       width: calc(50% - 4rem);
       margin-top: 0;
       margin-bottom: 0;
@@ -83,29 +83,29 @@ const LocationStyled = styled.section`
 
     &--title {
       h1 {
-        color: ${props => props.theme.black};
+        color: ${(props) => props.theme.black};
       }
     }
 
     .vcard {
       span {
         color: #363636;
-        font-family: ${props => props.theme.fontPrim};
+        font-family: ${(props) => props.theme.fontPrim};
         font-size: 1.8rem;
         font-weight: 300;
         font-style: normal;
         line-height: 1.5;
 
-        @media (min-width: ${props => props.theme.bpTablet}) {
+        @media (min-width: ${(props) => props.theme.bpTablet}) {
           font-size: 1.6rem;
         }
 
-        @media (min-width: ${props => props.theme.bpDesksm}) {
+        @media (min-width: ${(props) => props.theme.bpDesksm}) {
           font-size: 2rem;
           line-height: 1.67;
         }
 
-        @media (min-width: ${props => props.theme.bpDeskmd}) {
+        @media (min-width: ${(props) => props.theme.bpDeskmd}) {
           font-size: 2.4rem;
         }
 
@@ -114,7 +114,7 @@ const LocationStyled = styled.section`
           font-weight: 300;
 
           &:hover {
-            color: ${props => props.theme.colorSec};
+            color: ${(props) => props.theme.colorSec};
           }
         }
       }
@@ -134,7 +134,7 @@ const LocationStyled = styled.section`
     top: auto;
     bottom: 0;
   }
-`
+`;
 
 const AnyReactComponent = ({ text }) => (
   <div
@@ -152,7 +152,7 @@ const AnyReactComponent = ({ text }) => (
   >
     {text}
   </div>
-)
+);
 
 class Location extends Component {
   static defaultProps = {
@@ -161,7 +161,7 @@ class Location extends Component {
       lng: -113.9981432,
     },
     zoom: 15,
-  }
+  };
 
   render() {
     return (
@@ -174,7 +174,7 @@ class Location extends Component {
             <div style={{ height: "400px", width: "400px" }}>
               <GoogleMapReact
                 bootstrapURLKeys={{
-                  key: "AIzaSyDFyRMCtr0PHZf78qVXKdr2VGXj1h44ga0",
+                  key: process.env.GATSBY_MY_MAP_CODE,
                 }}
                 defaultCenter={this.props.center}
                 defaultZoom={this.props.zoom}
@@ -229,8 +229,8 @@ class Location extends Component {
         </StandardWrapper>
         <AngleGreyBackground className="location-background" />
       </LocationStyled>
-    )
+    );
   }
 }
 
-export default Location
+export default Location;
