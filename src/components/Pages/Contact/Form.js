@@ -140,7 +140,7 @@ class Form extends Component {
                 name="issueType"
                 onChange={this.onChange}
                 value={this.state.issueType}
-                required={false}
+                required={true}
               >
                 <option value=""> -- Select an issue -- </option>
                 <option title="emergencyService" value="emergencyService">
@@ -173,7 +173,7 @@ class Form extends Component {
               type="text"
               value={this.state.yourName}
               onChange={this.onChange}
-              required={false}
+              required={true}
             />
           </FormFieldContainerFull>
 
@@ -188,7 +188,7 @@ class Form extends Component {
               type="email"
               value={this.state.yourEmail}
               onChange={this.onChange}
-              required={false}
+              required={true}
             />
           </FormFieldContainerFull>
 
@@ -203,7 +203,7 @@ class Form extends Component {
               type="text"
               value={this.state.yourPhone}
               onChange={this.onChange}
-              required={false}
+              required={true}
             />
           </FormFieldContainerFull>
 
@@ -219,7 +219,7 @@ class Form extends Component {
               name="yourDetails"
               value={this.state.yourDetails}
               onChange={this.onChange}
-              required={false}
+              required={true}
             />
           </FormFieldContainerFull>
           <UnderlineButton>
