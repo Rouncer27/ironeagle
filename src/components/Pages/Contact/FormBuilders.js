@@ -1,19 +1,19 @@
-import React, { Component } from "react"
-import styled from "styled-components"
-import axios from "axios"
+import React, { Component } from "react";
+import styled from "styled-components";
+import axios from "axios";
 
 import {
   FormFieldContainerFull,
   FormLabels,
   InputField,
   InputTextArea,
-} from "../../styles/Commons/FormFeilds"
+} from "../../styles/Commons/FormFeilds";
 
-import { UnderlineButton } from "../../styles/Commons/Buttons"
-import { formHasErrors, formSentSuccess } from "../../Utilities/FormFunctions"
-import FormSuccessModal from "../../Utilities/Modals/FormSuccessModal"
-import FormSendingModal from "../../Utilities/Modals/FormSendingModal"
-import FormErrorModal from "../../Utilities/Modals/FormErrorModal"
+import { UnderlineButton } from "../../styles/Commons/Buttons";
+import { formHasErrors, formSentSuccess } from "../../Utilities/FormFunctions";
+import FormSuccessModal from "../../Utilities/Modals/FormSuccessModal";
+import FormSendingModal from "../../Utilities/Modals/FormSendingModal";
+import FormErrorModal from "../../Utilities/Modals/FormErrorModal";
 
 const FormStyled = styled.div`
   width: 100%;
@@ -38,27 +38,27 @@ const FormStyled = styled.div`
 
   .build-form-button {
     button {
-      color: ${props => props.theme.black};
+      color: ${(props) => props.theme.black};
 
       &::after {
-        background: ${props => props.theme.colorPrim};
+        background: ${(props) => props.theme.colorPrim};
       }
 
       &:hover {
-        color: ${props => props.theme.colorSec};
+        color: ${(props) => props.theme.colorSec};
         &::after {
-          background: ${props => props.theme.colorSec};
+          background: ${(props) => props.theme.colorSec};
         }
       }
     }
   }
-`
+`;
 
 export default class FormBuilders extends Component {
   constructor(props) {
-    super(props)
-    this.onChange = this.onChange.bind(this)
-    this.submitTheForm = this.submitTheForm.bind(this)
+    super(props);
+    this.onChange = this.onChange.bind(this);
+    this.submitTheForm = this.submitTheForm.bind(this);
 
     this.state = {
       submitting: false,
@@ -69,70 +69,70 @@ export default class FormBuilders extends Component {
       buildEmail: "",
       buildPhone: "",
       buildDetails: "",
-    }
+    };
   }
 
   submitTheForm(e) {
-    e.preventDefault()
-    this.setState(prevState => {
+    e.preventDefault();
+    this.setState((prevState) => {
       return {
         ...prevState,
         submitting: !prevState.submitting,
-      }
-    })
-    const bodyFormData = new FormData()
-    bodyFormData.append("buildName", this.state.buildName)
-    bodyFormData.append("buildEmail", this.state.buildEmail)
-    bodyFormData.append("buildPhone", this.state.buildPhone)
-    bodyFormData.append("buildDetails", this.state.buildDetails)
+      };
+    });
+    const bodyFormData = new FormData();
+    bodyFormData.append("buildName", this.state.buildName);
+    bodyFormData.append("buildEmail", this.state.buildEmail);
+    bodyFormData.append("buildPhone", this.state.buildPhone);
+    bodyFormData.append("buildDetails", this.state.buildDetails);
 
-    const baseURL = "https://database.ironeagle.ca"
-    const config = { headers: { "Content-Type": "multipart/form-data" } }
+    const baseURL = "https://database.ironeagle.ca";
+    const config = { headers: { "Content-Type": "multipart/form-data" } };
 
     axios
       .post(
         `${baseURL}/wp-json/contact-form-7/v1/contact-forms/80/feedback`,
         bodyFormData,
-        config
+        config,
       )
-      .then(res => {
+      .then((res) => {
         if (res.data.status === "mail_sent") {
           setTimeout(() => {
-            formSentSuccess(this.setState.bind(this))
+            formSentSuccess(this.setState.bind(this));
             // this.formSentSuccess(res.data.message)
-          }, 1000)
+          }, 1000);
         } else if (res.data.status === "validation_failed") {
           setTimeout(() => {
-            formHasErrors(this.setState.bind(this), res.data.invalidFields)
+            formHasErrors(this.setState.bind(this), res.data.invalidFields);
             // this.formHaveErrors(res.data.message, res.data.invalidFields)
-          }, 1000)
+          }, 1000);
         }
       })
-      .catch(err => {
-        console.log(err)
-      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   onChange(e) {
-    this.setState({ [e.target.name]: e.target.value })
+    this.setState({ [e.target.name]: e.target.value });
   }
   render() {
-    let builderNameError = false
-    let builderEmailError = false
-    let buildPhoneError = false
-    let builderDetailsError = false
+    let builderNameError = false;
+    let builderEmailError = false;
+    let buildPhoneError = false;
+    let builderDetailsError = false;
 
-    this.state.errors.forEach(error => {
+    this.state.errors.forEach((error) => {
       if (error.idref === "buildName") {
-        builderNameError = "Full Name is required"
+        builderNameError = "Full Name is required";
       } else if (error.idref === "buildEmail") {
-        builderEmailError = "email is required"
+        builderEmailError = "email is required";
       } else if (error.idref === "buildPhone") {
-        buildPhoneError = "Phone number is required"
+        buildPhoneError = "Phone number is required";
       } else if (error.idref === "buildDetails") {
-        builderDetailsError = "Your Question / Details is Required"
+        builderDetailsError = "Your Question / Details is Required";
       }
-    })
+    });
     return (
       <FormStyled>
         <form onSubmit={this.submitTheForm} className="form-contact">
@@ -147,7 +147,7 @@ export default class FormBuilders extends Component {
               type="text"
               value={this.state.buildName}
               onChange={this.onChange}
-              required={false}
+              required={true}
             />
           </FormFieldContainerFull>
 
@@ -162,7 +162,7 @@ export default class FormBuilders extends Component {
               type="email"
               value={this.state.buildEmail}
               onChange={this.onChange}
-              required={false}
+              required={true}
             />
           </FormFieldContainerFull>
 
@@ -177,7 +177,7 @@ export default class FormBuilders extends Component {
               type="text"
               value={this.state.buildPhone}
               onChange={this.onChange}
-              required={false}
+              required={true}
             />
           </FormFieldContainerFull>
 
@@ -193,7 +193,7 @@ export default class FormBuilders extends Component {
               name="buildDetails"
               value={this.state.buildDetails}
               onChange={this.onChange}
-              required={false}
+              required={true}
             />
           </FormFieldContainerFull>
           <UnderlineButton className="build-form-button">
@@ -211,6 +211,6 @@ export default class FormBuilders extends Component {
           <FormErrorModal formSetState={this.setState.bind(this)} />
         )}
       </FormStyled>
-    )
+    );
   }
 }
